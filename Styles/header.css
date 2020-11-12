@@ -1,0 +1,50 @@
+@font-face {
+  font-family: Acme;
+  src: url(Acme-Regular.ttf);
+}
+
+#header {
+  position: absolute;
+  font-family: Acme;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid black;
+  /* box-shadow: 0px 10px 170px; */
+  display: flex;
+  /* padding: 1rem 1.5rem;
+  justify-content: space-between; */
+  background-color: #2d3047;
+  color: white;
+  flex-wrap: wrap;
+}
+
+#banner {
+  width: 100%;
+  display: flex;
+  padding: 1rem 1.5rem;
+  justify-content: space-between;
+}
+
+#nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 2rem;
+}
+
+#logo {
+  font-size: 2rem;
+}
+
+#logout {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 2rem;
+  color: #2d3047;
+  background-color: white;
+  padding: 0.6rem 2.5rem;
+  border: 1px solid black;
+  font-family: Acme;
+}
