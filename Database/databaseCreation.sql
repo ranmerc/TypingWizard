@@ -38,8 +38,7 @@ CREATE TABLE users(username VARCHAR(100) NOT NULL,
 --mockPara			-				Mock paragraph for practice based on keys learnt 
 --lessonName       -				Lesson Name
 
-CREATE TABLE lessons(lessonId VARCHAR(10),
-							lessonsInstruction TEXT,	
+CREATE TABLE lessons(lessonId VARCHAR(10),	
 							mockPara TEXT,	
 							lessonName varchar(100),
 							PRIMARY KEY(lessonId)
