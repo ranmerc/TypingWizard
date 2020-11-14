@@ -5,8 +5,8 @@
 		private static $host="localhost";
 		private static $port="5432";
 		private static $dbname="typingwizard";
-		private static $user="superuser";
-		private static $password="1234";
+		private static $user="postgres";
+		private static $password="manju1234";
 		
 		static	function getConnectionString()
 		{
