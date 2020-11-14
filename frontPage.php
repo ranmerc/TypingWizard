@@ -48,5 +48,5 @@
         </div>
     </div>
 </body>
-
+<script src="./Js/frontPage.js"></script>
 </html>

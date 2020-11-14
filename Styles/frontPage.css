@@ -1,66 +1,67 @@
-@font-face
-{
-    font-family: Acme;
-    src: url(Acme-Regular.ttf);
+@font-face {
+  font-family: Acme;
+  src: url(Acme-Regular.ttf);
 }
 
-/* html
-{
-    background: url(../Images/frontPageBgPic.png) no-repeat center center fixed;
+#nav {
+  display: none;
+}
+
+/* html {
+  background: url(../Images/frontPageBgPic.png) no-repeat center center fixed;
     background-size: 100% 80%;
 } */
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    user-select: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-#mainContainer{
-    display: flex;
-    width: 80%;
-    justify-content: space-around;
+#mainContainer {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
 }
 
-#mainContainer > div{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    border-radius: 1rem;
-    overflow: none;
-    width: 20%;
-    padding: 2rem;
-    background-color: #2D3047;
-    color: white;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.25s, background-color 0.25s, color 0.25s;
-    cursor: pointer;
+#mainContainer > div {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 1rem;
+  overflow: none;
+  width: 20%;
+  padding: 2rem;
+  background-color: #2d3047;
+  color: white;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.25s, background-color 0.25s, color 0.25s;
+  cursor: pointer;
 }
 
-#mainContainer > div:hover{
-    transform: scale(1.1);
-    background-color: white;
-    color: #2D3047;
+#mainContainer > div:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: #2d3047;
 }
 
-.cardTitle{
-    margin-bottom: 1rem;
-    font-family: Acme;
-    font-size: 2rem;
+.cardTitle {
+  margin-bottom: 1rem;
+  font-family: Acme;
+  font-size: 2rem;
 }
 
-.cardAbout{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 1rem;
-    font-size: 1.5rem;
+.cardAbout {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 1rem;
+  font-size: 1.5rem;
 }
-
