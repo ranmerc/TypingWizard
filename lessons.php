@@ -27,9 +27,6 @@
       
   </div>
 </div>
-<div id="spaceforkeyboard">
-  <p>sdfsdfsdf</p>
-</div>
 
 <script src="Js/lessons.js"></script>
 <?php
