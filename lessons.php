@@ -1,12 +1,10 @@
 <?php
     include("header.html");
-    
 ?>
+<title>Lessons</title>
 <link rel="stylesheet" href="Styles/lessons.css">
-
-
 <div id="sidebar" class="row">
-  <div class="lesson_title_div column1">
+  <div class="lesson_title_div column-1">
       <p class="lesson_title" data-lesson="1">Lesson 1</p>
       <p class="lesson_title" data-lesson="2">Lesson 2</p>
       <p class="lesson_title" data-lesson="3">Lesson 3</p>
@@ -23,8 +21,8 @@
       <p class="lesson_title" data-lesson="14">Lesson 14</p>
       <p class="lesson_title" data-lesson="15">Lesson 15</p>
   </div>
-  <div class="lesson_content_div  hidden column2" >
-      
+  <div class="lesson_content_div  hidden column-2" >
+    
   </div>
 </div>
 

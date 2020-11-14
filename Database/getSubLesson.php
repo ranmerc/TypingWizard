@@ -1,5 +1,5 @@
 <?php
-    require("Database/config.php");
+    require("./config.php");
 
     if(isset($_POST['lessonid']))
     {
@@ -19,7 +19,6 @@
         $res=pg_query($connection,$query);
         if(pg_num_rows($res)==0)
             break;
-
         $row=pg_fetch_assoc($res);
         $html.="<p class=\"lesson_name\" data-lesson_id=\"{$lessonNo}.{$sublesson}\">{$row['lessonname']}</p>";
         $sublesson++;

@@ -1,5 +1,5 @@
 <?php
-    require("Database/config.php");
+    require("./config.php");
 
     if(isset($_POST['lessonid']))
     {
