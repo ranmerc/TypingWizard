@@ -61,12 +61,14 @@ CREATE TABLE typingChallenges(typingTestId FLOAT,
 -- Save user performance in practices
 
 --topSpeed -    User's top  speed uptil now
---totalTime - 	Total time user has spent in praticing random texts (BIGINT because store in seconds then change it to hours,minutes,seconds)
+--averageSpeed - Average Speed of user until now
+--averageError - Average Error of user until now
 --totalSamples- 
 
 CREATE TABLE userStats(username varchar(100) REFERENCES users(username),
-								topSpeed BIGINT,
-								totaltime BIGINT,
+								topSpeed FLOAT,
+								averageSpeed FLOAT,
+								averageError FLOAT,
 								totalSamples INT
 								);
 						

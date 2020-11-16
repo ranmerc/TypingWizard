@@ -1,5 +1,67 @@
-div{
-    position: relative;
-    margin:1rem 1rem;
-    display: inline;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#main_container {
+  position: relative;
+  top: 7rem;
+  display: flex;
+  height: 35rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: #2d3047;
+}
+
+#right {
+  width: 15%;
+  border: 1px solid black;
+  margin: 2rem 1rem 2rem;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 1rem;
+}
+
+#stats {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.statTitle {
+  font-size: 1.5rem;
+}
+
+.statValue {
+  font-size: 1.1rem;
+}
+
+#left {
+  width: 85%;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0rem 2rem 2rem;
+}
+
+#greeting {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+#greeting #title {
+  font-size: 2rem;
+  margin-bottom: 0.1rem;
+}
+
+#charts {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#charts p {
+  margin: 1rem 0rem 2rem;
+  font-weight: bold;
 }
