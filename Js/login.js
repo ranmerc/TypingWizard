@@ -1,20 +1,20 @@
-let usernameElement = document.getElementsByClassName("username")[0];
-let passwordElement = document.getElementsByClassName("password")[0];
-let wrongs = document.getElementsByClassName("wrong"); // array(0=>username 1=>password)
-let button = document.getElementsByClassName("login_button")[0];
+var usernameElement = document.getElementsByClassName("username")[0];
+var passwordElement = document.getElementsByClassName("password")[0];
+var wrongs = document.getElementsByClassName("wrong"); // array(0=>username 1=>password)
+var button = document.getElementsByClassName("login_button")[0];
 
 document.addEventListener("DOMContentLoaded", function() {
     button.setAttribute("disabled", "disabled");
 })
 
 function checkPass(){
-    let password = passwordElement.value;
+    var password = passwordElement.value;
     var res = /^[A-Za-z0-9_@*&~`.,"'|]{6,20}$/.test(password);
     return res;
 }
 
 function checkUser(){
-    let username = usernameElement.value;
+    var username = usernameElement.value;
     var res = /^[A-Za-z0-9_]{6,20}$/.test(username);
     return res;
 }

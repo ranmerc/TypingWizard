@@ -12,7 +12,7 @@ xhr.onload = function(){
     // lessonContents.style.display = "inline";
 }
 
-for(let i = 0; i < lessonTitles.length; ++i){
+for(var i = 0; i < lessonTitles.length; ++i){
     lessonTitles[i].addEventListener("mouseover", function (e) {
       xhr.open("POST", "./Database/getSubLesson.php", true);
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
