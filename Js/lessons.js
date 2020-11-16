@@ -3,7 +3,7 @@ var lessonContents = document.getElementsByClassName("lesson_content_div")[0];
 var ITEMS_ADDED = false;
 
 var xhr = new XMLHttpRequest();
-xhr.open("POST","../Database/getSubLesson.php",true);
+xhr.open("POST","./Database/getSubLesson.php",true);
 xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 xhr.send();
 
@@ -14,7 +14,7 @@ xhr.onload = function(){
 
 for(let i = 0; i < lessonTitles.length; ++i){
     lessonTitles[i].addEventListener("mouseover", function (e) {
-      xhr.open("POST", "../Database/getSubLesson.php", true);
+      xhr.open("POST", "./Database/getSubLesson.php", true);
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xhr.send("lessonid=" + lessonTitles[i].dataset.lesson);
       ITEMS_ADDED = false;
@@ -36,7 +36,7 @@ var lessonJSON;
 function getLessons(lessonId)
 {
     var xhr = new XMLHttpRequest();
-    xhr.open("POST","../Database/getLessons.php",true);
+    xhr.open("POST","./Database/getLessons.php",true);
     xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xhr.send("lessonid="+lessonId);
 
