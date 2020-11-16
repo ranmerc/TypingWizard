@@ -54,7 +54,7 @@ var xhr=new XMLHttpRequest();
 
 var margin=width*0.05;
 
-xhr.open("POST","fetchData.php",true);
+xhr.open("POST","Database/fetchData.php",true);
 xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 xhr.send();
 
@@ -62,6 +62,7 @@ var histogramData;
 var lineChartData;
 xhr.onload=function(){
     var data=JSON.parse(xhr.responseText);
+    console.log(xhr.responseText);
     histogramData=data.histogram;
     lineChartData=data.lineChart;
 
@@ -84,13 +85,18 @@ xhr.onload=function(){
 
     var yIncreement=(height-2*margin)/data.lineChart.MAX_ERROR;
     
+    lineContext.fillText(data.lineChart.MAX_ERROR,margin*0.6,Math.floor(height-(height-margin)));
+    lineContext.fillText(Math.floor(data.lineChart.MAX_ERROR*(3/4)),margin*0.6,Math.floor(height-(height-margin)*3/4));
+    lineContext.fillText(Math.floor(data.lineChart.MAX_ERROR/2),margin*0.6,Math.floor(height-(height-margin)/2));
+    lineContext.fillText(Math.floor(data.lineChart.MAX_ERROR*(1/4)),margin*0.6,Math.floor(height-(height-margin)*(1/4)));
+    
+    
     for(i=2*margin;j<=count;i+=increment)
     {
         lineContext.fillText(j+"",i,height-(margin/2));
         
         lineheight=(lineChartData.lineChartData[j]*yIncreement);
-        lineContext.fillText(lineChartData.lineChartData[j],margin*0.6,Math.floor((height-margin)-lineheight));
-
+        
         // alert(lineheight);
         drawLine(lineContext,prevW,prevH,i,(height-margin)-lineheight,"#2D3047");
     
@@ -109,6 +115,13 @@ xhr.onload=function(){
     j=1;
     yIncreement=(height-2*margin)/data.histogram.MAX_WPM;
     
+    
+    histContext.fillText(data.histogram.MAX_WPM,margin*0.6,Math.floor(height-(height-margin)));
+    histContext.fillText(Math.floor(data.histogram.MAX_WPM*(3/4)),margin*0.6,Math.floor(height-(height-margin)*3/4));
+    histContext.fillText(Math.floor(data.histogram.MAX_WPM/2),margin*0.6,Math.floor(height-(height-margin)/2));
+    histContext.fillText(Math.floor(data.histogram.MAX_WPM*(1/4)),margin*0.6,Math.floor(height-(height-margin)*(1/4)));
+    
+
     //console.log("YIncreement: "+yIncreement);
     var boxheight;
     for(i=margin;j<=count;i+=increment)
@@ -117,7 +130,6 @@ xhr.onload=function(){
 
         boxheight=(histogramData.histogramData[j])*yIncreement;
         //console.log("Box height "+Math.floor((height-margin)-boxheight));
-       histContext.fillText(histogramData.histogramData[j],margin*0.69,Math.floor((height-margin)-boxheight));
         drawRect(histContext,i,(height-margin)-boxheight,increment-1,boxheight,'#2D3047');
         j++;
     }

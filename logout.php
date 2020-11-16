@@ -1,4 +1,6 @@
 <?php
-    setcookie("username", "", time()-3600);
+    
+    setcookie("username", "", time()-36000,"/");
     header("Location:login.php");
 ?>
+
