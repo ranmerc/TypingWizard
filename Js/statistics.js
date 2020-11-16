@@ -134,9 +134,8 @@ xhr.onload=function(){
         j++;
     }
 
-    
-    
 
+    
     // X-axis
     drawLine(histContext,margin-10,height-margin,width-margin,height-margin,'#020202');
     drawLine(lineContext,margin-10,height-margin,width-margin,height-margin,'#020202');

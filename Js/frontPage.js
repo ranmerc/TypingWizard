@@ -1,6 +1,5 @@
 document.querySelector("#nav").remove();
 
-        
 var course=document.getElementsByClassName("courseCard")[0];
 var practice=document.getElementsByClassName("practiceCard")[0];
 var games=document.getElementsByClassName("gamesCard")[0];
@@ -21,6 +20,5 @@ games.addEventListener('click',function(){
 
 statistics.addEventListener('click',function(){
     window.location.href="statistics.php";
-
 });
 
