@@ -3,12 +3,11 @@
     font-family: Acme;
     src: url(Acme-Regular.ttf);
 }
-#footer{
+#footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    border: 1px solid black;
-    width: 100%;
+    right:0;
     padding: 1rem 1.5rem;
     background-color: #2D3047;
     color: white;

@@ -108,7 +108,7 @@
                         <?php if($totalSamples)
                                 echo $totalSamples." ";
                             else  
-                                echo "NaN" ?>
+                                echo "NaN"; ?>
                     </div>
                 </div>
                 <div class="stat">
