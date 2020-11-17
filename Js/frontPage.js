@@ -7,18 +7,18 @@ var statistics=document.getElementsByClassName("statisticsCard")[0];
 
 
 course.addEventListener('click',function(){
-    window.location.href="lessons.php";
+    window.location.href = "lessons.php";
 });
 
 practice.addEventListener('click',function(){
-
+    window.location.href = "practice.php"
 });
 
 games.addEventListener('click',function(){
-   // window.location.href="lesson.php";
+   window.location.href = "games.php";
 });
 
 statistics.addEventListener('click',function(){
-    window.location.href="statistics.php";
+    window.location.href = "statistics.php";
 });
 

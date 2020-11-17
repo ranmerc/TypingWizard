@@ -112,6 +112,7 @@ input[type=text]:focus, input[type=password]:focus
     font-size: 1.1rem;
     font-family: Acme;
     margin-bottom: 0.7rem;
+    cursor: pointer;
 }
 
 .login_button:hover

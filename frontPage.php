@@ -1,3 +1,9 @@
+<?php
+    if(!isset($_COOKIE['username']))
+    {
+        header("Location:login.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 

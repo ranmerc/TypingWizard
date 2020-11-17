@@ -77,11 +77,11 @@ xhr.onload=function(){
     prevW=margin;
     lineContext.fillText(0+"",i,height-5);
     
-    lineContext.font="18px Arial";
-    lineContext.fillText("Test Number",width*0.50,height-5);
+    lineContext.font="20px Arial";
+    lineContext.fillText("Test Number",width*0.45,height-15);
     
     lineContext.fillText("Error",5,height*0.50);
-    lineContext.font="10px Arial";
+    lineContext.font="15px Arial";
 
     var yIncreement=(height-2*margin)/data.lineChart.MAX_ERROR;
     
@@ -108,10 +108,10 @@ xhr.onload=function(){
     }
 
     
-    histContext.font="10px Arial";
-    histContext.fillText("Test Number",width*0.50,height-5);
+    histContext.font="20px Arial";
+    histContext.fillText("Test Number",width*0.45,height-15);
     histContext.fillText("WPM",1,height*0.50);
-    histContext.font="10px Arial";
+    histContext.font="15px Arial";
     j=1;
     yIncreement=(height-2*margin)/data.histogram.MAX_WPM;
     

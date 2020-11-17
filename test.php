@@ -12,11 +12,14 @@
         include("./footer.html");
     ?>
     <div class="main_container">
+        <div class="stats">
+            
+        </div>
         <div id="para">
 
         </div>
         <div class="keyboard">
-        
+            <?php include("./keyboard.html"); ?>
         </div>
     </div>
 </body>
