@@ -35,6 +35,7 @@ switch (lessonsCompleted) {
     letterPool = letterPool.concat(["e", "i"]);
 }
 
+// var words = Math.floor(Math.random() * (20 - 15 + 1) + 15);
 for(var i = 0; i < 20; ++i){
   var wordLength = Math.floor(Math.random() * (7 - 3 + 1) + 3);
   for(var j = 0; j < wordLength; ++j){
@@ -42,3 +43,57 @@ for(var i = 0; i < 20; ++i){
   }
   para += " ";
 }
+
+console.log(para);
+
+var keys = {
+  "`" : "tilde",
+  "~" : "tilde",
+  "!" : "1",
+  "@" : "2",
+  "#" : "3",
+  "$" : "4",
+  "%" : "5",
+  "^" : "6",
+  "&" : "7",
+  "*" : "8", 
+  "(" : "9",
+  ")" : "0",
+  "-" : "minus",
+  "_" : "minus",
+  "+" : "equal",
+  "=" : "equal",
+  "[" : "bracketstart",
+  "{" : "bracketstart",
+  "]" : "bracketend",
+  "}" : "bracketend",
+  "\\" : "backslash",
+  "|" : "backslash",
+  ":" : "colon",
+  ";" : "colon",
+  "'" : "quotes",
+  "\"" : "quotes",
+  "," : "comma",
+  "<" : "comma",
+  "." : "fullstop",
+  ">" : "fullstop",
+  "/" : "forwardslash",
+  "?" : "forwardslash"
+}
+
+document.addEventListener("keydown", (e)=>{
+  e.preventDefault();
+  var query = ""
+  console.log(e.key.length)
+  if(e.key == " ")
+    query = ".key-space";
+  else if(/^[A-Za-z0-9]$/.test(e.key)){
+    query = ".key-" + e.key.toLowerCase();
+  }
+  else
+    query = ".key-" + (keys[e.key] || e.key.toLowerCase());
+  ele = document.querySelectorAll(query);
+  ele[0].style.backgroundColor = "green";
+  if(ele.length > 1)
+    ele[1].style.backgroundColor = "green";
+})

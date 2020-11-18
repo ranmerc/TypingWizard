@@ -9,7 +9,7 @@
     top: 2rem;
     border: 1px solid black;
     height: 10rem;
-    /* margin: auto; */
+    margin: auto;
     width: 600px;
     padding: 0.3rem;
     display: flex;
@@ -74,7 +74,7 @@
     align-items: center;
 }
 
-.key-caps {
+.key-capslock {
     width: 12%;
 }
 

@@ -16,7 +16,7 @@
             
         </div>
         <div id="para">
-
+            
         </div>
         <div class="keyboard">
             <?php include("./keyboard.html"); ?>
