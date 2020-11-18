@@ -50,9 +50,12 @@ lineChartC.height=height;
 histogramC.style.background='#F4F4ED';
 lineChartC.style.background='#F4F4ED';
 
+var margin=width*0.05;
+
+
 var xhr=new XMLHttpRequest();
 
-var margin=width*0.05;
+
 
 xhr.open("POST","Database/fetchData.php",true);
 xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
@@ -77,18 +80,27 @@ xhr.onload=function(){
     prevW=margin;
     lineContext.fillText(0+"",i,height-5);
     
-    lineContext.font="20px Arial";
+    lineContext.font="18px Arial";
     lineContext.fillText("Test Number",width*0.45,height-15);
     
-    lineContext.fillText("Error",5,height*0.50);
+
+    lineContext.save();
+    lineContext.translate(20,height*0.5);
+    lineContext.rotate(-0.5*Math.PI);
+    var rText = 'Error';
+    lineContext.fillText(rText , 0, 0);
+    lineContext.restore();
+
+
+   // lineContext.fillText("Error",5,height*0.50);
     lineContext.font="15px Arial";
 
     var yIncreement=(height-2*margin)/data.lineChart.MAX_ERROR;
     
     lineContext.fillText(data.lineChart.MAX_ERROR,margin*0.6,Math.floor(height-(height-margin)));
-    lineContext.fillText(Math.floor(data.lineChart.MAX_ERROR*(3/4)),margin*0.6,Math.floor(height-(height-margin)*3/4));
-    lineContext.fillText(Math.floor(data.lineChart.MAX_ERROR/2),margin*0.6,Math.floor(height-(height-margin)/2));
-    lineContext.fillText(Math.floor(data.lineChart.MAX_ERROR*(1/4)),margin*0.6,Math.floor(height-(height-margin)*(1/4)));
+    lineContext.fillText(Math.floor(data.lineChart.MAX_ERROR*(3/4)),margin*0.5,Math.floor(height-(height-margin)*3/4));
+    lineContext.fillText(Math.floor(data.lineChart.MAX_ERROR/2),margin*0.5,Math.floor(height-(height-margin)/2));
+    lineContext.fillText(Math.floor(data.lineChart.MAX_ERROR*(1/4)),margin*0.5,Math.floor(height-(height-margin)*(1/4)));
     
     
     for(i=2*margin;j<=count;i+=increment)
@@ -108,18 +120,27 @@ xhr.onload=function(){
     }
 
     
-    histContext.font="20px Arial";
+    histContext.font="18px Arial";
     histContext.fillText("Test Number",width*0.45,height-15);
-    histContext.fillText("WPM",1,height*0.50);
+
+    
+    histContext.save();
+    histContext.translate(20,height*0.5);
+    histContext.rotate(-0.5*Math.PI);
+    rText = 'WPM';
+    histContext.fillText(rText , 0, 0);
+    histContext.restore();
+
+    //histContext.fillText("WPM",1,height*0.50);
     histContext.font="15px Arial";
     j=1;
     yIncreement=(height-2*margin)/data.histogram.MAX_WPM;
     
     
     histContext.fillText(data.histogram.MAX_WPM,margin*0.6,Math.floor(height-(height-margin)));
-    histContext.fillText(Math.floor(data.histogram.MAX_WPM*(3/4)),margin*0.6,Math.floor(height-(height-margin)*3/4));
-    histContext.fillText(Math.floor(data.histogram.MAX_WPM/2),margin*0.6,Math.floor(height-(height-margin)/2));
-    histContext.fillText(Math.floor(data.histogram.MAX_WPM*(1/4)),margin*0.6,Math.floor(height-(height-margin)*(1/4)));
+    histContext.fillText(Math.floor(data.histogram.MAX_WPM*(3/4)),margin*0.5,Math.floor(height-(height-margin)*3/4));
+    histContext.fillText(Math.floor(data.histogram.MAX_WPM/2),margin*0.5,Math.floor(height-(height-margin)/2));
+    histContext.fillText(Math.floor(data.histogram.MAX_WPM*(1/4)),margin*0.5,Math.floor(height-(height-margin)*(1/4)));
     
 
     //console.log("YIncreement: "+yIncreement);
@@ -137,11 +158,22 @@ xhr.onload=function(){
 
     
     // X-axis
-    drawLine(histContext,margin-10,height-margin,width-margin,height-margin,'#020202');
-    drawLine(lineContext,margin-10,height-margin,width-margin,height-margin,'#020202');
+    drawLine(histContext,margin-10,height-margin,width-margin+30,height-margin,'#020202');
+    drawLine(lineContext,margin-10,height-margin,width-margin+30,height-margin,'#020202');
 
     // Y-axis
     drawLine(histContext,margin,margin-20,margin,height-margin,'#020202');
     drawLine(lineContext,margin,margin-20,margin,height-margin,'#020202');
+
+    
 }
 
+var img=new Image();
+img.src="Images/triangleUp.jpg";
+histContext.drawImage(img,margin-8,20,15,15);
+lineContext.drawImage(img,margin-8,20,15,15);
+
+var img=new Image();
+img.src="Images/rightArrrow.png";
+histContext.drawImage(img,width-margin+30,height-margin-7,15,15);
+lineContext.drawImage(img,width-margin+30,height-margin-7,15,15);

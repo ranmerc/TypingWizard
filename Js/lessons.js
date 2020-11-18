@@ -12,13 +12,18 @@ xhr.onload = function(){
     // lessonContents.style.display = "inline";
 }
 
+function getTitles(lessonId)
+{
+    xhr.open("POST", "./Database/getSubLesson.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.send("lessonid=" + lessonId);
+}
+
 for(var i = 0; i < lessonTitles.length; ++i){
     lessonTitles[i].addEventListener("mouseover", function (e) {
-      xhr.open("POST", "./Database/getSubLesson.php", true);
-      xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      xhr.send("lessonid=" + lessonTitles[i].dataset.lesson);
+     getTitles(this.dataset.lesson);
       ITEMS_ADDED = false;
-    });
+    },false);
 }
 
 var lessonTitleDiv = document.getElementsByClassName("lesson_title_div")[0];
@@ -63,3 +68,4 @@ function addAllLessons()
         },false);
     }
 }
+
