@@ -20,12 +20,12 @@
     <div id="container">
         <div id="bubble">
             <div class="cardTitle">
-                Bubble Typing
+                Bubble Burst
             </div>
         </div>
         <div id="tetris">
             <div class="cardTitle">
-                Text Tetris
+                Word Tetris
             </div>
         </div>
     </div>

@@ -1,5 +1,5 @@
 document.querySelector("#tetris").addEventListener("click", function(){
-    window.location.href = "tetris.php";
+    window.location.href = "./wordTetris.html";
 });
 
 document.querySelector("#bubble").addEventListener("click", function(){

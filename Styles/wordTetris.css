@@ -1,0 +1,158 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: "Comic Sans MS";
+}
+
+.gameContainer{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background: url(../Images/tetris.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.gameTitle{
+	position: absolute;
+	top: 3vh;
+	left: 1vw;
+	width: 50vw;
+	height: 20vh;
+	font-size: 75px;
+	color: white;
+}
+
+.startButton{
+	position: absolute;
+	top: 30vh;
+	left: 6vw;
+	font-size: 30px;
+	color: black;
+	text-align: center;
+	cursor: pointer;
+	background-color: #00BBF9;
+	border-radius: 20px;
+	padding: 15px 45px;
+}
+
+.exitButton{
+	position: absolute;
+	top: 50vh;
+	left: 6vw;
+	font-size: 30px;
+	color: black;
+	text-align: center;
+	cursor: pointer;
+	background-color: #00BBF9;
+	border-radius: 20px;
+	padding: 15px 45px;
+}
+
+.exitButton a{
+	text-decoration: none;
+	color: black;
+}
+
+.timer{
+	position: absolute;
+	top: 7vh;
+	right: 7vw;
+	width: 22vh;
+	height: 22vh;
+	border-radius: 50%;
+	font-size: 30px;
+	color: black;
+	text-align: center;
+	padding-top: 28px;
+	background-color: #00BBF9;
+}
+
+.result{
+	position: absolute;
+	top: 35vh;
+	right: 5vw;
+	width: 15vw;
+	height: 40vh;
+	font-size: 30px;
+	color: black;
+	text-align: center;
+	line-height: 10vh;
+	background-color: #00BBF9;
+	border-radius: 10px;
+}
+
+.gameArea{
+	position: absolute;
+	top: 15vh;
+	left: 34vw;
+	width: 35vw;
+	height: 80vh;
+	display: none;
+}
+
+.instruction{
+	position: absolute;
+	top: 15vh;
+	left: 34vw;
+	width: 35vw;
+	height: 80vh;
+	background-color: #4683A4;
+		
+}
+
+.instructionContent{
+	position: absolute;
+	left: 4vw;
+	width: 390px;
+	height: 80vh;
+	font-size: 30px;
+	color: black;
+	text-align: left;
+	line-height: 40px;
+	padding-top: 20px
+}
+
+.gameOver{
+	position: absolute;
+	top: 15vh;
+	left: 34vw;
+	width: 35vw;
+	height: 80vh;
+	font-size: 42px;
+	color: black;
+	text-align: center;
+	padding-top: 20px;
+	display: none;
+}
+
+.gameTub{
+	position: absolute;
+	bottom: 0;
+	left: 35px;
+	width: 410px;
+	height: 340px;
+	border-left: 15px solid #632B30;
+	border-bottom: 15px solid #632B30;
+	border-right: 15px solid #632B30;
+	border-radius: 0 0 20px 20px;
+}
+
+.gameRect{
+	position: absolute;
+	left: 50px;
+	width: 380px;
+	height: 65px;
+	border: 1px solid #494C43;
+	border-radius: 20px;
+	display: none;
+	font-size: 40px;
+	color: #000009;
+	text-align: center;
+	z-index: 1;
+}
