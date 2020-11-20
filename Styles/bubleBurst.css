@@ -1,0 +1,128 @@
+body{
+    background-color:white;
+}
+
+
+h1{
+    text-align: center;
+    color:#FC7753;
+    font-family: 'Sansita Swashed', cursive;
+    
+}
+
+a{
+    text-decoration: none;
+}
+.instruction
+{
+    height: 5rem;
+    width: 8rem;
+    background-color:#ED254E;
+    color:white;
+    font-family: "Comic Sans MS";
+    font-size: 1rem;
+    padding: 0.5rem;
+    position: absolute;
+
+}
+
+#startSection
+{
+    background-color:#98DFAF;
+    width: 8rem;
+    height: 4rem;
+    position: absolute;
+    font-family: "Comic Sans MS";
+    color: white;
+    left: 45%;
+    top:45%;
+}
+
+#startSection:hover{
+    background-color:white;
+    color: #98DFAF;
+    border-color: #98DFAF;
+}
+
+
+#startSection p:hover
+{
+    color:#98DFAF;
+    background-color: white;
+}
+
+
+#startSection p
+{
+    position: absolute;
+    margin-left: 20%;
+    margin-top:10%;
+    font-size: 2rem;
+    cursor: context-menu;
+    color:white;
+}
+
+
+#gameSection{
+    display:none;
+    
+}
+
+.data,p
+{
+
+		color: grey;
+		font-family:"Comic Sans MS";
+		font-size:1rem;
+	
+}
+
+#scoreSection{
+    display: none;
+    background-color:#7FC6A4;
+    width: 15rem;
+    height: 10rem;
+    color:white0;
+    border:white 0.1rem solid;
+    margin-left: 40%;
+}
+
+#errors,#timeTake,#feedback
+{
+    color:white;
+}
+
+
+
+
+
+#exit a{
+    color:red;
+    position: relative;
+    float: right;
+    top:0rem;
+    background-color:white;
+    border:1px solid red;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 4rem;
+    padding: 0.5rem;
+
+}
+
+#exit a:hover{
+    color:white;
+    position: absolute;
+    background-color:red;
+    border:5px dotted red;
+    
+
+}
+
+#realScore{
+    background-color: #FF715B;
+    color:#FFFFFF;
+    float:right;
+    padding:1rem;
+    visibility: hidden;
+}
