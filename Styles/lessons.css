@@ -5,14 +5,22 @@
   overflow: hidden;
 }
 
+.lessons_container{
+  display: flex;
+  /*outline: 1px solid red;*/
+  margin-top: 8rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid black;
+}
+
 #sidebar {
   font-family: sans-serif;
   width: 7%;
 }
 
 .lesson_title_div {
-  margin-top: 8rem;
-  margin-left: 0.5rem;
+
   cursor: pointer;
 }
 

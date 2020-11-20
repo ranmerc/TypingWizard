@@ -1,6 +1,6 @@
-<?php
+<!-- <?php
     include("header.html");
-?>
+?> -->
 <title>Lessons</title>
 <link rel="stylesheet" href="Styles/lessons.css">
 <div class="lessons_container">
@@ -22,10 +22,11 @@
         <p class="lesson_title" data-lesson="14">Lesson 14</p>
         <p class="lesson_title" data-lesson="15">Lesson 15</p>
     </div>
-    <div class="lesson_content_div  hidden column-2" >
 
-    </div>
+    <div class="lesson_content_div  hidden column-2" >
+    </div> 
   </div>
+
   <div class="typing_container">
     <div class="typing_field">
     
@@ -34,6 +35,7 @@
 
     </div>
   </div>
+
   <div class="stats_container">
     <div class="timer">
 
@@ -42,8 +44,10 @@
 
     </div>
   </div>
+  
 </div>
+
 <script src="Js/lessons.js"></script>
-<?php
+<!-- <?php
   include("footer.html");
-?>
+?> -->
