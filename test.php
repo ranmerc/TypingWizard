@@ -11,11 +11,32 @@
         include("./header.html");
         include("./footer.html");
     ?>
-    <div class="main_container">
+    <div id="container">
         <div class="stats">
-            
+            <div class="counter wpm">
+                <div class="counterTitle">
+                    Speed
+                </div>
+                <div class="counterValue">
+                    140 WPM
+                </div>
+                <div class="change">
+                    (+100.000)
+                </div>
+            </div>
+            <div class="counter error">
+                <div class="counterTitle">
+                    Erorrs
+                </div>
+                <div class="counterValue">
+                    10
+                </div>   
+                <div class="change">
+                    (-100.000)
+                </div>            
+            </div>
         </div>
-        <div id="para">
+        <div id="para" class="inactive">
             
         </div>
         <div class="keyboard">

@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 
-
 #keyboard {
     font-family: sans-serif;
     position: relative;
@@ -94,6 +93,14 @@
     width: 50%;
 }
 
-.red {
-    background: red;
+.correctKey {
+    background-color: green;
+}
+
+.wrongKey {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
 }

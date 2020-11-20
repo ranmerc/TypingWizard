@@ -17,7 +17,7 @@
   background-color: #2d3047;
   color: white;
   flex-wrap: wrap;
-  user-select: none;
+  -moz-user-select: none;
 }
 
 #banner {
