@@ -3,5 +3,5 @@ document.querySelector("#tetris").addEventListener("click", function(){
 });
 
 document.querySelector("#bubble").addEventListener("click", function(){
-    window.location.href = "bubble.php";
+    window.location.href = "./bubleBurst.html";
 });

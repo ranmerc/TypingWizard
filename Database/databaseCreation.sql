@@ -25,7 +25,7 @@ CREATE TABLE forgotPassQuestions(qno INT,
 --Users Table
 CREATE TABLE users(username VARCHAR(100) NOT NULL,
 							password VARCHAR(100) NOT NULL,
-							forgotquestionNo INT REFERENCES forgotPassQuestions(qno) ,
+							forgotquestionNo INT REFERENCES forgotPassQuestions(qno) on update set null on delete cascade,
 							answer TEXT NOT NULL,
 							PRIMARY KEY(username)
 							);
@@ -65,7 +65,7 @@ CREATE TABLE typingChallenges(typingTestId FLOAT,
 --averageError - Average Error of user until now
 --totalSamples- 
 
-CREATE TABLE userStats(username varchar(100) REFERENCES users(username),
+CREATE TABLE userStats(username varchar(100) REFERENCES users(username) on update set null on delete cascade,
 								topSpeed FLOAT,
 								averageSpeed FLOAT,
 								averageError FLOAT,
@@ -80,13 +80,13 @@ CREATE TABLE userStats(username varchar(100) REFERENCES users(username),
 --Give the last lesson completed by a user 
 
 
-CREATE TABLE lessonsCompleted(username VARCHAR(100) REFERENCES users(username),
-										 lessonId   VARCHAR(10)  REFERENCES lessons(lessonId),
+CREATE TABLE lessonsCompleted(username VARCHAR(100) REFERENCES users(username) on update set null on delete cascade,
+										 lessonId   VARCHAR(10)  REFERENCES lessons(lessonId) on update set null on delete cascade,
 										PRIMARY KEY (username,lessonId)
 										);		
 
 	
-CREATE TABLE typingTestUser(testNo INT,username VARCHAR(100) REFERENCES users(username),wpm INT,error INT
+CREATE TABLE typingTestUser(testNo INT,username VARCHAR(100) REFERENCES users(username) on update set null on delete cascade,wpm INT,error INT
 									,PRIMARY KEY (username,testNo));
 
 

@@ -53,6 +53,22 @@ lineChartC.style.background='#F4F4ED';
 var margin=width*0.05;
 
 
+
+var img1=new Image();
+img1.src="./Images/triangleUp.jpg";
+img1.onload=function(){
+histContext.drawImage(img1,margin-8,20,15,15);
+lineContext.drawImage(img1,margin-8,20,15,15);
+}
+
+var img2=new Image();
+img2.src="./Images/rightArrrow.png";
+img2.onload=function(){
+histContext.drawImage(img2,width-margin+30,height-margin-7,15,15);
+lineContext.drawImage(img2,width-margin+30,height-margin-7,15,15);
+}
+
+
 var xhr=new XMLHttpRequest();
 
 
@@ -97,7 +113,7 @@ xhr.onload=function(){
 
     var yIncreement=(height-2*margin)/data.lineChart.MAX_ERROR;
     
-    lineContext.fillText(data.lineChart.MAX_ERROR,margin*0.6,Math.floor(height-(height-margin)));
+    lineContext.fillText(data.lineChart.MAX_ERROR,margin*0.5,Math.floor(height-(height-margin)));
     lineContext.fillText(Math.floor(data.lineChart.MAX_ERROR*(3/4)),margin*0.5,Math.floor(height-(height-margin)*3/4));
     lineContext.fillText(Math.floor(data.lineChart.MAX_ERROR/2),margin*0.5,Math.floor(height-(height-margin)/2));
     lineContext.fillText(Math.floor(data.lineChart.MAX_ERROR*(1/4)),margin*0.5,Math.floor(height-(height-margin)*(1/4)));
@@ -137,7 +153,7 @@ xhr.onload=function(){
     yIncreement=(height-2*margin)/data.histogram.MAX_WPM;
     
     
-    histContext.fillText(data.histogram.MAX_WPM,margin*0.6,Math.floor(height-(height-margin)));
+    histContext.fillText(data.histogram.MAX_WPM,margin*0.5,Math.floor(height-(height-margin)));
     histContext.fillText(Math.floor(data.histogram.MAX_WPM*(3/4)),margin*0.5,Math.floor(height-(height-margin)*3/4));
     histContext.fillText(Math.floor(data.histogram.MAX_WPM/2),margin*0.5,Math.floor(height-(height-margin)/2));
     histContext.fillText(Math.floor(data.histogram.MAX_WPM*(1/4)),margin*0.5,Math.floor(height-(height-margin)*(1/4)));
@@ -168,12 +184,3 @@ xhr.onload=function(){
     
 }
 
-var img=new Image();
-img.src="Images/triangleUp.jpg";
-histContext.drawImage(img,margin-8,20,15,15);
-lineContext.drawImage(img,margin-8,20,15,15);
-
-var img=new Image();
-img.src="Images/rightArrrow.png";
-histContext.drawImage(img,width-margin+30,height-margin-7,15,15);
-lineContext.drawImage(img,width-margin+30,height-margin-7,15,15);

@@ -2,5 +2,81 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  user-select: none;
+  -moz-user-select: none;
+}
+
+body {
+  height: 100vh;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 96%;
+}
+
+.stats {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+  border: 1px solid black;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.change {
+  font-size: 0.6rem;
+}
+
+.wrong {
+  background: red;
+  color: white;
+}
+#para {
+  border: 1px solid black;
+  width: 45%;
+  font-family: monospace;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.keyboard {
+  transform: scale(1.2);
+}
+
+.counterTitle{
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.counterValue{
+  font-size: 1.1rem;
+  margin-bottom: 0.1rem;
+}
+
+.inactive {
+  color: grey;
+}
+
+#para > span {
+  pointer-events: none;
+}
+
+.current{
+  color: white;
+  background-color: black;
+  animation: blinker 0.75s ease-in-out infinite;
+}
+
+@keyframes blinker {
+  50%{
+    color: black;
+    background-color: white;
+  }
 }
