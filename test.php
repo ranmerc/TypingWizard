@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Styles/test.css">
+    <link rel="stylesheet" href="./Styles/keyboard.css">
     <title>Typing Test</title>
 </head>
 <body>
@@ -18,10 +19,10 @@
                     Speed
                 </div>
                 <div class="counterValue">
-                    140 WPM
+                    NaN
                 </div>
                 <div class="change">
-                    (+100.000)
+                    (NaN)
                 </div>
             </div>
             <div class="counter error">
@@ -29,19 +30,17 @@
                     Erorrs
                 </div>
                 <div class="counterValue">
-                    10
+                    NaN
                 </div>   
                 <div class="change">
-                    (-100.000)
+                    (NaN)
                 </div>            
             </div>
         </div>
         <div id="para" class="inactive">
             
         </div>
-        <div class="keyboard">
-            <?php include("./keyboard.html"); ?>
-        </div>
+        <?php include("./keyboard.html"); ?>
     </div>
 </body>
 <script src="./Js/test.js"></script>

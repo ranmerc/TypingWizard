@@ -7,9 +7,10 @@
 DROP TABLE IF EXISTS lessonsCompleted;
 DROP TABLE IF EXISTS typingChallenges;
 DROP TABLE IF EXISTS lessons;
-DROP TABLE IF EXISTS  userStats;
+DROP TABLE IF EXISTS userStats;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS forgotPassQuestions;
+DROP TABLE IF EXISTS typingTestUser;
 
 
 
@@ -86,7 +87,7 @@ CREATE TABLE lessonsCompleted(username VARCHAR(100) REFERENCES users(username) o
 										);		
 
 	
-CREATE TABLE typingTestUser(testNo INT,username VARCHAR(100) REFERENCES users(username) on update set null on delete cascade,wpm INT,error INT
+CREATE TABLE typingTestUser(testNo INT,username VARCHAR(100) REFERENCES users(username) on update set null on delete cascade,wpm FLOAT,error INT
 									,PRIMARY KEY (username,testNo));
 
 
