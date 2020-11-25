@@ -52,9 +52,10 @@ CREATE TABLE lessons(lessonId VARCHAR(10),
 --lessonId		- 
 --para            - paragraph for each typing challenge
 
-CREATE TABLE typingChallenges(typingTestId FLOAT,
+CREATE TABLE typingChallenges(typingChallengeId FLOAT,
+										challengeTitle TEXT,
 										para    TEXT,
-										PRIMARY KEY(typingTestId)
+										PRIMARY KEY(typingChallengeId)
 										);
 
 -- User Stats
