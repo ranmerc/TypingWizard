@@ -39,20 +39,20 @@ INSERT INTO lessons VALUES('1.4.4','kl;j kl;j dljk dljk','New key drill 3');
 INSERT INTO lessons VALUES('1.4.5','kalf kalf fajl fajl','New key drill 3');
 INSERT INTO lessons VALUES('1.4.6','kjsl kjsl dkss dkss','New key drill 3');
 INSERT INTO lessons VALUES('1.4.7','lsfa lsfa ksjl kslj','New key drill 3');
-INSERT INTO lessons VALUES('1.4.8','fsf; sjks↵<br>lfk; s;fd','New key drill 3');
-INSERT INTO lessons VALUES('1.4.9','ajjk jakf↵<br>fsjk lkdf','New key drill 3');
+INSERT INTO lessons VALUES('1.4.8','fsf; sjks/nlfk; s;fd','New key drill 3');
+INSERT INTO lessons VALUES('1.4.9','ajjk jakf/nfsjk lkdf','New key drill 3');
 
 
-INSERT INTO lessons VALUES('1.5.1','ajsk dfl;↵<br>jaks laks','Key drill 1');
-INSERT INTO lessons VALUES('1.5.2','dkjs lkas↵<br>alkd dak;','Key drill 1');
-INSERT INTO lessons VALUES('1.5.3','aldj ajfk↵<br>assk lsal','Key drill 1');
-INSERT INTO lessons VALUES('1.5.4','jj;k ;lk;↵<br>fa;f jlfd','Key drill 1');
-INSERT INTO lessons VALUES('1.5.5','fs;j da;l↵<br>f;;a jjjk','Key drill 1');
-INSERT INTO lessons VALUES('1.5.6','llds safd↵<br>skfj f;kd','Key drill 1');
-INSERT INTO lessons VALUES('1.5.7','s;a; dfas↵<br>ddsf aj;a','Key drill 1');
-INSERT INTO lessons VALUES('1.5.8','k;as llfj↵<br>fjka lsak','Key drill 1');
-INSERT INTO lessons VALUES('1.5.9','lflf sfja↵<br>fafj sdas','Key drill 1');
-INSERT INTO lessons VALUES('1.5.10','sadj sdkf↵<br>flfk daal','Key drill 1');
+INSERT INTO lessons VALUES('1.5.1','ajsk dfl;/njaks laks','Key drill 1');
+INSERT INTO lessons VALUES('1.5.2','dkjs lkas/nalkd dak;','Key drill 1');
+INSERT INTO lessons VALUES('1.5.3','aldj ajfk/nassk lsal','Key drill 1');
+INSERT INTO lessons VALUES('1.5.4','jj;k ;lk;/nfa;f jlfd','Key drill 1');
+INSERT INTO lessons VALUES('1.5.5','fs;j da;l/nf;;a jjjk','Key drill 1');
+INSERT INTO lessons VALUES('1.5.6','llds safd/nskfj f;kd','Key drill 1');
+INSERT INTO lessons VALUES('1.5.7','s;a; dfas/nddsf aj;a','Key drill 1');
+INSERT INTO lessons VALUES('1.5.8','k;as llfj/nfjka lsak','Key drill 1');
+INSERT INTO lessons VALUES('1.5.9','lflf sfja/nfafj sdas','Key drill 1');
+INSERT INTO lessons VALUES('1.5.10','sadj sdkf/nflfk daal','Key drill 1');
 
 
 INSERT INTO lessons VALUES('1.6.1','add add add add','Key drill 2');
@@ -72,19 +72,19 @@ INSERT INTO lessons VALUES('1.6.14','alfalfa alfalfa alfalfa alfalfa','Key drill
 INSERT INTO lessons VALUES('1.6.15','salsa salsa salsa salsa','Key drill 2');
 
 
-INSERT INTO lessons VALUES('1.7.1','lkka kdsf↵<br>ksja sjff','Key drill 3');
-INSERT INTO lessons VALUES('1.7.2','akaf fsjl↵<br>dsad ;lja','Key drill 3');
-INSERT INTO lessons VALUES('1.7.3','fsjk dafd↵<br>sla; djla','Key drill 3');
-INSERT INTO lessons VALUES('1.7.4','fsjk df;a↵<br>alk; dsja','Key drill 3');
-INSERT INTO lessons VALUES('1.7.5','dfjd dfkk↵<br>ssfa dlff','Key drill 3');
-INSERT INTO lessons VALUES('1.7.6','jjls kkjs↵<br>lakj ksdf','Key drill 3');
-INSERT INTO lessons VALUES('1.7.7','dddl akak↵<br>sdks ffkd','Key drill 3');
-INSERT INTO lessons VALUES('1.7.8','ljld aksd↵<br>jsdf fkfj','Key drill 3');
-INSERT INTO lessons VALUES('1.7.9','ldjd ksja↵<br>lfal aljk','Key drill 3');
-INSERT INTO lessons VALUES('1.7.10','slsj jsjd↵<br>sssd kfls','Key drill 3');
-INSERT INTO lessons VALUES('1.7.11','djsj alk;↵<br>ksfa d;fa','Key drill 3');
-INSERT INTO lessons VALUES('1.7.12','adas fdjd↵<br>aslj jjll','Key drill 3');
-INSERT INTO lessons VALUES('1.7.13','skjd faja↵<br>dsad kakl','Key drill 3');
+INSERT INTO lessons VALUES('1.7.1','lkka kdsf/nksja sjff','Key drill 3');
+INSERT INTO lessons VALUES('1.7.2','akaf fsjl/ndsad ;lja','Key drill 3');
+INSERT INTO lessons VALUES('1.7.3','fsjk dafd/nsla; djla','Key drill 3');
+INSERT INTO lessons VALUES('1.7.4','fsjk df;a/nalk; dsja','Key drill 3');
+INSERT INTO lessons VALUES('1.7.5','dfjd dfkk/nssfa dlff','Key drill 3');
+INSERT INTO lessons VALUES('1.7.6','jjls kkjs/nlakj ksdf','Key drill 3');
+INSERT INTO lessons VALUES('1.7.7','dddl akak/nsdks ffkd','Key drill 3');
+INSERT INTO lessons VALUES('1.7.8','ljld aksd/njsdf fkfj','Key drill 3');
+INSERT INTO lessons VALUES('1.7.9','ldjd ksja/nlfal aljk','Key drill 3');
+INSERT INTO lessons VALUES('1.7.10','slsj jsjd/nsssd kfls','Key drill 3');
+INSERT INTO lessons VALUES('1.7.11','djsj alk;/nksfa d;fa','Key drill 3');
+INSERT INTO lessons VALUES('1.7.12','adas fdjd/naslj jjll','Key drill 3');
+INSERT INTO lessons VALUES('1.7.13','skjd faja/ndsad kakl','Key drill 3');
 
 
 INSERT INTO lessons VALUES('1.8.1','add ads adds all','Word drill');
@@ -587,18 +587,18 @@ INSERT INTO lessons VALUES('4.9.8','fieldworker fellows frowsier redwoods wooded
 INSERT INTO lessons VALUES('4.9.9','wildfowl woofer lifework sorrows worked dowdier wore lows widow','Blind word drill 2');
 
 
-INSERT INTO lessons VALUES('4.10.1','if i do i like words<br>i walked forward<br>we do look alike<br>all is well','Text drill 1');
-INSERT INTO lessons VALUES('4.10.2','sure i do<br>so far all was well<br>i awoke<br>a ladder was raised<br>words are useless','Text drill 1');
-INSERT INTO lessons VALUES('4.10.3','joe asked<br>i adore flowers<br>i feared worse<br>well; well; dear<br>looks like a dress','Text drill 1');
-INSERT INTO lessons VALUES('4.10.4','four dollars a week<br>i was afraid<br>so i did; dear<br>so far all is well<br>off for a week','Text drill 1');
-INSERT INTO lessons VALUES('4.10.5','we were afraid<br>i was asked<br>also i was awkward<br>we are all as usual<br>well; we will see','Text drill 1');
+INSERT INTO lessons VALUES('4.10.1','if i do i like words/ni walked forward/nwe do look alike/nall is well','Text drill 1');
+INSERT INTO lessons VALUES('4.10.2','sure i do/nso far all was well/ni awoke/na ladder was raised/nwords are useless','Text drill 1');
+INSERT INTO lessons VALUES('4.10.3','joe asked/ni adore flowers/ni feared worse/nwell; well; dear/nlooks like a dress','Text drill 1');
+INSERT INTO lessons VALUES('4.10.4','four dollars a week/ni was afraid/nso i did; dear/nso far all is well/noff for a week','Text drill 1');
+INSERT INTO lessons VALUES('4.10.5','we were afraid/ni was asked/nalso i was awkward/nwe are all as usual/nwell; we will see','Text drill 1');
 
 
-INSERT INTO lessons VALUES('4.11.1','i look; i saw red<br>i laid low; i did<br>fields of roses<br>well said; wife<br>we are all sailors','Text drill 2');
-INSERT INTO lessons VALUES('4.11.2','we did; all of us<br>wife or widow<br>edward was a soldier<br>we will all swear<br>do i look afraid','Text drill 2');
-INSERT INTO lessons VALUES('4.11.3','we will order four<br>so did i<br>so would i<br>our ideas differ<br>louis was furious<br>we are so worried','Text drill 2');
-INSERT INTO lessons VALUES('4.11.4','skiddoo for all of us<br>a wolf is a wolf<br>arise; i will arise<br>i like flowers<br>i will; if i like','Text drill 2');
-INSERT INTO lessons VALUES('4.11.5','i like work; said jill<br>i looked forward<br>we are all alike<br>all four of us<br>is louise well<br>so would i; said rose','Text drill 2');
+INSERT INTO lessons VALUES('4.11.1','i look; i saw red/ni laid low; i did/nfields of roses/nwell said; wife/nwe are all sailors','Text drill 2');
+INSERT INTO lessons VALUES('4.11.2','we did; all of us/nwife or widow/nedward was a soldier/nwe will all swear/ndo i look afraid','Text drill 2');
+INSERT INTO lessons VALUES('4.11.3','we will order four/nso did i/nso would i/nour ideas differ/nlouis was furious/nwe are so worried','Text drill 2');
+INSERT INTO lessons VALUES('4.11.4','skiddoo for all of us/na wolf is a wolf/narise; i will arise/ni like flowers/ni will; if i like','Text drill 2');
+INSERT INTO lessons VALUES('4.11.5','i like work; said jill/ni looked forward/nwe are all alike/nall four of us/nis louise well/nso would i; said rose','Text drill 2');
 
 
 INSERT INTO lessons VALUES('4.12.1','kwuw ofow kodo wwwo','Extra key drill');
@@ -740,17 +740,17 @@ INSERT INTO lessons VALUES('5.9.3','jaundices concessions cosine inference renai
 INSERT INTO lessons VALUES('5.9.4','incurrence radiance unfenced clearness unclad fenceless reinforces slackness','Blind word drill 3');
 
 
-INSERT INTO lessons VALUES('5.10.1','i know<br>so did i once<br>our consciences were clear now<br>now all is safe and sound<br>i will and can do so','Text drill 1');
-INSERT INTO lessons VALUES('5.10.2','no one could lie down<br>confidence increased<br>an occasion was soon found<br>no one else was injured','Text drill 1');
-INSERT INTO lessons VALUES('5.10.3','we looked around<br>i was all alone<br>well i know<br>one window and four doors<br>i dislike crowds and noise','Text drill 1');
-INSERT INTO lessons VALUES('5.10.4','no one will see us<br>red cloud<br>i was a winner<br>of course<br>a silence fell<br>kick once<br>we faced a cold wind','Text drill 1');
-INSERT INTO lessons VALUES('5.10.5','duck under sofa<br>and i wondered<br>essence underlies influence<br>decrease in loudness of sound<br>reason is confounded','Text drill 1');
+INSERT INTO lessons VALUES('5.10.1','i know/nso did i once/nour consciences were clear now/nnow all is safe and sound/ni will and can do so','Text drill 1');
+INSERT INTO lessons VALUES('5.10.2','no one could lie down/nconfidence increased/nan occasion was soon found/nno one else was injured','Text drill 1');
+INSERT INTO lessons VALUES('5.10.3','we looked around/ni was all alone/nwell i know/none window and four doors/ni dislike crowds and noise','Text drill 1');
+INSERT INTO lessons VALUES('5.10.4','no one will see us/nred cloud/ni was a winner/nof course/na silence fell/nkick once/nwe faced a cold wind','Text drill 1');
+INSERT INTO lessons VALUES('5.10.5','duck under sofa/nand i wondered/nessence underlies influence/ndecrease in loudness of sound/nreason is confounded','Text drill 1');
 
 
-INSERT INTO lessons VALUES('5.11.1','know life<br>all is confusion and disorder<br>sure we can<br>no one can see us and we can see no one<br>dinner was now announced','Text drill 2');
-INSERT INTO lessons VALUES('5.11.2','i was accursed<br>and now we are free<br>all nodded concurrence<br>i was sick of work<br>our linen<br>i asked once<br>son is safe<br>no a word','Text drill 2');
-INSERT INTO lessons VALUES('5.11.3','i saw a rider<br>red owen<br>all is done<br>i like saloons<br>we worked in silence<br>slick as silk<br>we were now in darkness<br>no one saw our faces','Text drill 2');
-INSERT INTO lessons VALUES('5.11.4','no indeed<br>all noise ceased<br>we saw a wilderness<br>snow nodded<br>now i know<br>i was reckless and i knew fear<br>sacks laid crosswise<br>one was a coon','Text drill 2');
+INSERT INTO lessons VALUES('5.11.1','know life/nall is confusion and disorder/nsure we can/nno one can see us and we can see no one/ndinner was now announced','Text drill 2');
+INSERT INTO lessons VALUES('5.11.2','i was accursed/nand now we are free/nall nodded concurrence/ni was sick of work/nour linen/ni asked once/nson is safe/nno a word','Text drill 2');
+INSERT INTO lessons VALUES('5.11.3','i saw a rider/nred owen/nall is done/ni like saloons/nwe worked in silence/nslick as silk/nwe were now in darkness/nno one saw our faces','Text drill 2');
+INSERT INTO lessons VALUES('5.11.4','no indeed/nall noise ceased/nwe saw a wilderness/nsnow nodded/nnow i know/ni was reckless and i knew fear/nsacks laid crosswise/none was a coon','Text drill 2');
 
 
 INSERT INTO lessons VALUES('5.12.1','cino ;uaf nfin cndn','Extra key drill');
@@ -2274,21 +2274,33 @@ INSERT INTO forgotPassQuestions VALUES(2,'What is your favorite game?');
 INSERT INTO forgotPassQuestions  VALUES(3,'Who is your childhood sports hero?');
 
 
-INSERT INTO typingchallenges VALUES(1.0,'A Pomegranate and an Apple-tree were disputing about the quality of their fruits, and each claimed  that its own was the better of the two. High words passed between them, and a violent quarrel was imminent,  when a Bramble impudently poked its head out of a neighbouring hedge and  said, &quot;There, that''s enough, my friends; don''t let us quarrel.&quot;');
-INSERT INTO typingchallenges VALUES(2,'Jupiter announced that he intended to appoint a king over the birds, and named a day on which they were to appear before his throne, when he would select the most beautiful of them all to be their ruler. Wishing to look their best on the occasion they repaired to the banks of a stream, where they busied themselves in washing and preening their feathers. The Jackdaw was there along with the rest, and realised that, with his ugly plumage, he would have no chance of being chosen as he was: so he waited till they were all gone, and then picked up the most gaudy of the feathers they had dropped, and fastened them about his own body, with the result that he looked gayer than any of them. When the appointed day came, the birds assembled before Jupiter''s throne; and, after passing them in review, he was about to make the Jackdaw king, when all the rest set upon the king-elect, stripped him of his borrowed plumes, and exposed him for the Jackdaw that he was.');
-INSERT INTO typingchallenges VALUES(3,'A fox once fell into a trap, and after a struggle managed to get free, but with the loss of his brush. He was then so much ashamed of his appearance that he thought life was not worth living unless he could persuade the other Foxes to part with their tails also, and thus divert attention from his own loss. So he called a meeting of all the Foxes, and advised them to cut off their tails: &quot;They''re ugly things anyhow,&quot; he said, &quot;and besides they''re heavy, and it''s tiresome to be always carrying them about with you.&quot; But one of the other Foxes said, &quot;My friend, if you hadn''t lost your own tail, you wouldn''t be so keen on getting us to cut off ours.&quot;');
-INSERT INTO typingchallenges VALUES(4,'A Tortoise, discontented with his lowly life, and envious of the birds he saw disporting themselves in the air, begged an Eagle to teach him to fly. The Eagle protested that it was idle for him to try, as nature had not provided him with wings; but the Tortoise pressed him with entreaties and promises of treasure, insisting that it could only be a question of learning the craft of the air. So at length the Eagle consented to do the best he could for him, and picked him up in his talons. Soaring with him to a great height in the sky he then let him go, and the wretched Tortoise fell headlong and was dashed to pieces on a rock.');
-INSERT INTO typingchallenges VALUES(5,'Once upon a time a Frog came forth from his home in the marshes and proclaimed to all the world that he was a learned physician, skilled in drugs and able to cure all diseases. Among the crowd was a Fox, who called out, &quot;You a doctor! Why, how can you set up to heal others when you cannot even cure your own lame legs and blotched and wrinkled skin?&quot; Physician, heal thyself.');
-INSERT INTO typingchallenges VALUES(6,'A hungry Fox found in a hollow tree a quantity of bread and meat, which some shepherds had placed there against their return. Delighted with his find he slipped in through the narrow aperture and greedily devoured it all. But when he tried to get out again he found himself so swollen after his big meal that he could not squeeze through the hole, and fell to whining and groaning over his misfortune. Another Fox, happening to pass that way, came and asked him what the matter was; and, on learning the state of the case, said, &quot;Well, my friend, I see nothing for it but for you to stay where you are till you shrink to your former size; you''ll get out then easily enough.&quot;');
-INSERT INTO typingchallenges VALUES(7,'Jupiter issued a proclamation to all the beasts, and offered a prize to the one who, in his judgment, produced the most beautiful offspring. Among the rest came the Monkey, carrying a baby monkey in her arms, a hairless, flat-nosed little fright. When they saw it, the gods all burst into peal on peal of laughter; but the Monkey hugged her little one to her, and said, &quot;Jupiter may give the prize to whomsoever he likes: but I shall always think my baby the most beautiful of them all.&quot;');
-INSERT INTO typingchallenges VALUES(8,'An Eagle was sitting on a branch with a Kite, in sorrowful mood. &quot;Why,&quot; said the Kite, &quot;do I see you with such a melancholy air?&quot; &quot;I am looking out,&quot; said she, &quot;for a mate suited to myself, and cannot find one.&quot; &quot;Take me,&quot; said the Kite, &quot;who am so much stronger than you.&quot; &quot;Well, are you able to get a living by what you can carry away?&quot; &quot;Many''s the time that I have seized and carried off an ostrich in my talons.&quot; Induced by his words, the Eagle took him as her mate. A short time having passed after the nuptials, the Eagle said: &quot;Go and carry off for me the booty you promised me.&quot; Soaring aloft, the Kite brings back a field-mouse, most filthy, and stinking from long-contracted mouldiness. &quot;Is this,&quot; said the Eagle, &quot;the performance of your promise?&quot; The Kite replied to her: &quot;That I might contract a marriage with royalty, there is nothing I would not have pledged myself to do, although I knew that I was unable.&quot;');
-INSERT INTO typingchallenges VALUES(9,'In the house of a certain Poor Man, a Serpent was always in the habit of coming to his table, and being fed there plentifully upon the crumbs. Shortly after, the Man becoming rich, he began to be angry with the Serpent, and wounded him with an axe. After the lapse of some time he returned to his former poverty. When he saw that like the varying lot of the Serpent, his own fortunes also changed, he coaxingly begged him to pardon the offence. Then said the Serpent to him: &quot;You will repent of your wickedness until my wound is healed; don''t suppose, however, that I take you henceforth with implicit confidence to be my friend. Still, I could wish to be reconciled with you, if only I could never recall to mind the perfidious axe.&quot;');
-INSERT INTO typingchallenges VALUES(10,'A She-Goat, that she might keep her young one in safety, on going forth to feed, warned her heedless Kid not to open the door, because she knew that many wild beasts were prowling about the cattle stalls. When she was gone, there came a Wolf, imitating the voice of the dam, and ordered the door to be opened for him. When the Kid heard him, looking through a chink, he said to the Wolf: &quot;I hear a sound like my Mother''s voice, but you are a deceiver, and an enemy to me; under my Mother''s voice you are seeking to drink my blood, and stuff yourself with my flesh. Farewell.&quot;');
-INSERT INTO typingchallenges VALUES(11,'A Flea, chancing to sit on the back of a Camel who was going along weighed down with heavy burdens, was quite delighted with himself, as he appeared to be so much higher. After they had made a long journey, they came together in the evening to the stable. The Flea immediately exclaimed, skipping lightly to the ground: &quot;See, I have got down directly, that I may not weary you any longer, so galled as you are.&quot; The Camel replied: &quot;I thank you; but neither when you were on me did I find myself oppressed by your weight, nor do I feel myself at all lightened now you have dismounted.&quot;');
-INSERT INTO typingchallenges VALUES(12,'Worn with years, a Lion pretended illness. Many Beasts came for the purpose of visiting the sick King, whom at once he devoured. But a wary Fox stood at a distance before the den, saluting the King. On the Lion asking her why she did not come in: &quot;Because,&quot; said she, &quot;I see many foot-marks of those who have gone in, but none of those who came out.&quot;');
-INSERT INTO typingchallenges VALUES(13,'An Ass asked a Horse for a little barley. &quot;With all my heart,&quot; said he, &quot;if I had more than I wanted, I would give you plenty, in accordance with my dignified position; but bye-and-bye, as soon as I shall have come to my manger in the evening, I will give you a sackful of wheat.&quot; The Ass replied: &quot;If you now deny me on a trifling occasion, what am I to suppose you will do on one of greater importance?&quot;');
-INSERT INTO typingchallenges VALUES(14,'A Crow, sitting at her ease upon a Sheep''s back, pecked her with her beak. After she had done this for a long time, the Sheep, so patient under injury, remarked: &quot;If you had offered this affront to the Dog, you could not have endured his barking.&quot; But the Crow thus answered the Sheep: &quot;I never sit on the neck of one so strong, as I know whom I may provoke; my years having taught me cunning, I am civil to the robust, but insolent to the defenceless. Of such a nature have the Gods thought fit to create me.&quot;');
-INSERT INTO typingchallenges VALUES(15,'A Stork, having come to a well-known pool, found a Goose diving frequently beneath the water, and enquired why she did so. The other replied: &quot;This is our custom, and we find our food in the mud; and then, besides, we thus find safety, and escape the attack of the Hawk when he comes against us.&quot; &quot;I am much stronger than the Hawk,&quot; said the Stork; &quot;if you choose to make an alliance with me, you will be able victoriously to deride him.&quot; The Goose believing her, and immediately accepting her aid, goes with her into the fields: forthwith comes the Hawk, and seizes the Goose in his remorseless claws and devours her, while the Stork flies off. The Goose called out after her: &quot;He who trusts himself to so weak a protector, deserves to come to a still worse end.&quot;');
+INSERT INTO typingchallenges VALUES(1,'The Fox and the Grapes','A hungry Fox saw some fine bunches of Grapes hanging from a vine that was trained along a high trellis, and did his best to reach them by jumping as high as he could into the air. But it was all in vain, for they were just out of reach: so he gave up trying, and walked away with an air of dignity and unconcern, remarking, "I thought those Grapes were ripe, but I see now they are quite sour."');
 
+INSERT INTO typingchallenges VALUES(2,'The Lion and the Mouse','A Lion asleep in his lair was waked up by a Mouse running over his face. Losing his temper he seized it with his paw and was about to kill it. The Mouse, terrified, piteously entreated him to spare its life. "Please let me go," it cried, "and one day I will repay you for your kindness." The idea of so insignificant a creature ever being able to do anything for him amused the Lion');
+so much that he laughed aloud, and good-humouredly let it go. But the Mouse's chance came, after all.
+ One day the Lion got entangled in a net which had been spread for game by some hunters, and the Mouse 
+ heard and recognised his roars of anger and ran to the spot. Without more ado it set to work to gnaw the ropes 
+ with its teeth, and succeeded before long in setting the Lion free. "There!" said the Mouse, "you laughed at me when
+ I promised I would repay you: but now you see, even a Mouse can help a Lion."');
 
+INSERT INTO typingchallenges VALUES(3,'The Charcoal-Burner and the Fuller','There was once a Charcoal-burner who lived and worked by himself. A Fuller, however, happened to come and settle in the same neighbourhood; and the Charcoal-burner, having made his acquaintance and finding he was an agreeable sort of fellow, asked him if he would come and share his house: "We shall get to know one another better that way," he said, "and, beside, our household expenses will be diminished." The Fuller thanked him, but replied, "I couldn''t think of it, sir: why, everything I take such pains to whiten would be blackened in no time by your charcoal."');
 
+INSERT INTO typingchallenges VALUES(4,'The Goose that Laid the Golden Eggs','A Man and his Wife had the good fortune to possess a Goose which laid a Golden Egg every day. Lucky though they were, they soon began to think they were not getting rich fast enough, and, imagining the bird must be made of gold inside, they decided to kill it in order to secure the whole store of precious metal at once. But when they cut it open they found it was just like any other goose. Thus, they neither got rich all at once, as they had hoped, nor enjoyed any longer the daily addition to their wealth.
+Much wants more and loses all.');
+
+INSERT INTO typingchallenges VALUES(5,'The Cat and the Mice','There was once a house that was overrun with Mice. A Cat heard of this, and said to herself, "That''s the place for me," and off she went and took up her quarters in the house, and caught the Mice one by one and ate them. At last the Mice could stand it no longer, and they determined to take to their holes and stay there. "That''s awkward," said the Cat to herself: "the only thing to do is to coax them out by a trick." So she considered a while, and then climbed up the wall and let herself hang down by her hind legs from a peg, and pretended to be dead. By and by a Mouse peeped out and saw the Cat hanging there. "Aha!" it cried, "you''re very clever, madam, no doubt: but you may turn yourself into a bag of meal hanging there, if you like, yet you won''t catch us coming anywhere near you." If you are wise you won''t be deceived by the innocent airs of those whom you have once found to be dangerous.');
+
+INSERT INTO typingchallenges VALUES(6,'The Mischievous Dog','There was once a Dog who used to snap at people and bite them without any provocation, and who was a great nuisance to every one who came to his master''s house. So his master fastened a bell round his neck to warn people of his presence. The Dog was very proud of the bell, and strutted about tinkling it with immense satisfaction. But an old dog came up to him and said, "The fewer airs you give yourself the better, my friend. You don''t think, do you, that your bell was given you as a reward of merit? On the contrary, it is a badge of disgrace."
+Notoriety is often mistaken for fame.');
+
+INSERT INTO typingchallenges VALUES(7,'The Mice in Council','Once upon a time all the Mice met together in Council, and discussed the best means of securing themselves against the attacks of the cat. After several suggestions had been debated, a Mouse of some standing and experience got up and said, "I think I have hit upon a plan which will ensure our safety in the future, provided you approve and carry it out. It is that we should fasten a bell round the neck of our enemy the cat, which will by its tinkling warn us of her approach." This proposal was warmly applauded, and it had been already decided to adopt it, when an old Mouse got upon his feet and said, "I agree with you all that the plan before us is an admirable one: but may I ask who is going to bell the cat?"');
+
+INSERT INTO typingchallenges VALUES(8,'The Bat and the Weasels','A Bat fell to the ground and was caught by a Weasel, and was just going to be killed and eaten when it begged to be let go. The Weasel said he couldn''t do that because he was an enemy of all birds on principle. "Oh, but," said the Bat, "I''m not a bird at all: I''m a mouse." "So you are," said the Weasel, "now I come to look at you"; and he let it go. Some time after this the Bat was caught in just the same way by another Weasel, and, as before, begged for its life. "No," said the Weasel, "I never let a mouse go by any chance." "But I''m not a mouse," said the Bat; "I''m a bird." "Why, so you are," said the Weasel; and he too let the Bat go. Look and see which way the wind blows before you commit yourself.');
+
+INSERT INTO typingchallenges VALUES(9,'The Dog and the Sow','A Dog and a Sow were arguing and each claimed that its own young ones were finer than those of any other animal. "Well," said the Sow at last, "mine can see, at any rate, when they come into the world: but yours are born blind."');
+
+INSERT INTO typingchallenges VALUES(10,'The Fox and the Crow','A Crow was sitting on a branch of a tree with a piece of cheese in her beak when a Fox observed her and set his wits to work to discover some way of getting the cheese. Coming and standing under the tree he looked up and said, "What a noble bird I see above me! Her beauty is without equal, the hue of her plumage exquisite. If only her voice is as sweet as her looks are fair, she ought without doubt to be Queen of the Birds." The Crow was hugely flattered by this, and just to show the Fox that she could sing she gave a loud caw. Down came the cheese, of course, and the Fox, snatching it up, said, "You have a voice, madam, I see: what you want is wits."');
+
+INSERT INTO typingchallenges VALUES(11,'The Horse and the Groom','There was once a Groom who used to spend long hours clipping and combing the Horse of which he had charge, but who daily stole a portion of his allowance of oats, and sold it for his own profit. The Horse gradually got into worse and worse condition, and at last cried to the Groom, "If you really want me to look sleek and well, you must comb me less and feed me more."');
+
+INSERT INTO typingchallenges VALUES(12,'The Wolf and the Lamb','A Wolf came upon a Lamb straying from the flock, and felt some compunction about taking the life of so helpless a creature without some plausible excuse; so he cast about for a grievance and said at last, "Last year, sirrah, you grossly insulted me." "That is impossible, sir," bleated the Lamb, "for I wasn''t born then." "Well," retorted the Wolf, "you feed in my pastures." "That cannot be," replied the Lamb, "for I have never yet tasted grass." "You drink from my spring, then," continued the Wolf. "Indeed, sir," said the poor Lamb, "I have never yet drunk anything but my mother''s milk." "Well, anyhow," said the Wolf, "I''m not going without my dinner": and he sprang upon the Lamb and devoured it ithout more ado.');
