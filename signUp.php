@@ -43,7 +43,7 @@ if(isset($_POST["signup"]))
             $USEREXISTS=3;
         else
             $USEREXISTS=2;
-            setcookie("username",$userName,time()+3600,'/');
+            setcookie("username",$userName,time()+3600*24,'/');
         header("Location:./frontPage.php");
     }
 }

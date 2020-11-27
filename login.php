@@ -59,7 +59,7 @@
         {
             if(checkPassword($userName, $password))
             {
-                setcookie("username", $userName, time() + 3600, '/');
+                setcookie("username", $userName, time() + 3600*24, '/');
                 $WRONG_PASSWORD = 2;
                 $INVALID_USER = 2;
                 header("Location:./frontPage.php");
