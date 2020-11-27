@@ -2276,8 +2276,8 @@ INSERT INTO forgotPassQuestions  VALUES(3,'Who is your childhood sports hero?');
 
 INSERT INTO typingchallenges VALUES(1,'The Fox and the Grapes','A hungry Fox saw some fine bunches of Grapes hanging from a vine that was trained along a high trellis, and did his best to reach them by jumping as high as he could into the air. But it was all in vain, for they were just out of reach: so he gave up trying, and walked away with an air of dignity and unconcern, remarking, "I thought those Grapes were ripe, but I see now they are quite sour."');
 
-INSERT INTO typingchallenges VALUES(2,'The Lion and the Mouse','A Lion asleep in his lair was waked up by a Mouse running over his face. Losing his temper he seized it with his paw and was about to kill it. The Mouse, terrified, piteously entreated him to spare its life. "Please let me go," it cried, "and one day I will repay you for your kindness." The idea of so insignificant a creature ever being able to do anything for him amused the Lion');
-so much that he laughed aloud, and good-humouredly let it go. But the Mouse's chance came, after all.
+INSERT INTO typingchallenges VALUES(2,'The Lion and the Mouse','A Lion asleep in his lair was waked up by a Mouse running over his face. Losing his temper he seized it with his paw and was about to kill it. The Mouse, terrified, piteously entreated him to spare its life. "Please let me go," it cried, "and one day I will repay you for your kindness." The idea of so insignificant a creature ever being able to do anything for him amused the Lion
+so much that he laughed aloud, and good-humouredly let it go. But the Mouse''s chance came, after all.
  One day the Lion got entangled in a net which had been spread for game by some hunters, and the Mouse 
  heard and recognised his roars of anger and ran to the spot. Without more ado it set to work to gnaw the ropes 
  with its teeth, and succeeded before long in setting the Lion free. "There!" said the Mouse, "you laughed at me when
