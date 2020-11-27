@@ -25,7 +25,7 @@ getCurrentLesson(init);
 
 function init(){
   insertPara(generatePara(lessonsCompleted));
-  display();
+  display(true);
   para = document.querySelectorAll("#para > span")
   document.querySelector("#para").addEventListener("click", toggler);
   document.addEventListener("keyup", function() {
@@ -33,7 +33,19 @@ function init(){
   });
 }
 
-function display() {
+function display(bool) {
+  if(bool){
+    var sum = obj["totalSamples"] * obj["averageSpeed"] - obj["lastWPM"];
+    if(obj["totalSamples"] != 1)
+      obj["averageSpeed"] = (sum/(obj["totalSamples"]-1)).toFixed(2);
+    else 
+      obj["averageSpeed"] = sum;
+    sum = obj["totalSamples"] * obj["averageError"] - obj["lastError"];
+    if(obj["totalSamples"] != 1)
+      obj["averageError"] = (sum/(obj["totalSamples"]-1)).toFixed(2);
+    else
+      obj["averageError"] = sum;
+}
   document.querySelector(".wpm .counterValue").innerHTML = obj["lastWPM"];
   var change = (obj["lastWPM"] - obj["averageSpeed"]).toFixed(2);
   document.querySelector(".wpm .change").style.color = change > 0 ? "green" : "red";

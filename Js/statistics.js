@@ -153,7 +153,7 @@ xhr.onload=function(){
     yIncreement=(height-2*margin)/data.histogram.MAX_WPM;
     
     
-    histContext.fillText(data.histogram.MAX_WPM,margin*0.5,Math.floor(height-(height-margin)));
+    histContext.fillText(Math.floor(data.histogram.MAX_WPM),margin*0.5,Math.floor(height-(height-margin)));
     histContext.fillText(Math.floor(data.histogram.MAX_WPM*(3/4)),margin*0.5,Math.floor(height-(height-margin)*3/4));
     histContext.fillText(Math.floor(data.histogram.MAX_WPM/2),margin*0.5,Math.floor(height-(height-margin)/2));
     histContext.fillText(Math.floor(data.histogram.MAX_WPM*(1/4)),margin*0.5,Math.floor(height-(height-margin)*(1/4)));
