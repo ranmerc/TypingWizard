@@ -24,13 +24,31 @@
         $averageError = $row[3];
         $totalSamples = $row[4];
     }
-    $query = "SELECT * FROM lessonsCompleted WHERE username='{$userName}'";
+    $query = "SELECT lessonid FROM lessonsCompleted WHERE username='{$userName}'";
     $res = pg_query($connection, $query);
     if(!$res)
         die("An error occured");
-    while($row = pg_fetch_row($res)){
-        $lessonCompleted = $row[1];
+    function compare($curr, $max){
+        $carr = explode(".", $curr);
+        $marr = explode(".", $max);
+        if($carr[0] > $marr[0])
+            return $curr;
+        if($carr[0] < $marr[0])
+            return $max;
+        if($carr[1] < $marr[1])
+            return $max;
+        if($carr[1] > $marr[1])
+            return $curr;
+        if($carr[2] < $marr[2])
+            return $max;
+        if($carr[2] > $marr[2])
+            return $curr;
     }
+    $max = '0.0.0';
+    while($row = pg_fetch_row($res)){
+        $max = compare($max, $row[0]);
+    }
+    $lessonCompleted = $max;
 ?>
 
 <html>

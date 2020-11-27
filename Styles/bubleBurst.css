@@ -112,9 +112,7 @@ a{
 
 #exit a:hover{
     color:white;
-    position: absolute;
     background-color:red;
-    border:5px dotted red;
     
 
 }
