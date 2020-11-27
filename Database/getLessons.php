@@ -17,11 +17,14 @@
 
     $arr=array();
     $i=0;
+    $lessonName="";//added by me
     while($row=pg_fetch_assoc($res))
     {
         $arr[$i]=$row['mockpara'];
+        $lessonName=$row['lessonname'];//added
         $i++;
     }
     $arr['count']=$i;
+    $arr['lessonName']=$lessonName;
     echo json_encode($arr);
 ?>
