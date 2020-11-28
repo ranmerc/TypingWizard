@@ -18,6 +18,7 @@
         include("./footer.html");
     ?>
     <div id="container">
+        <span id="backGround"></span>
         <div id="bubble">
             <div class="cardTitle">
                 Bubble Burst

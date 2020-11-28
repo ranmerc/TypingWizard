@@ -245,7 +245,6 @@
         <div class="statsTitle">Time</div>
         <div class="timer">00 : 00</div>    
     </div>
-
     <div class="stats">
         <div class="statsError">
             <div class="statsTitle">Error</div>
