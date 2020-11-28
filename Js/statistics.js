@@ -119,8 +119,9 @@ xhr.onload=function(){
     lineContext.fillText(Math.floor(data.lineChart.MAX_ERROR*(1/4)),margin*0.5,Math.floor(height-(height-margin)*(1/4)));
     
     
-    for(i=2*margin;j<=count;i+=increment)
+    for(i=(margin+10);j<=count;i+=increment)
     {
+        if(count<=50)
         lineContext.fillText(j+"",i,height-(margin/2));
         
         lineheight=(lineChartData.lineChartData[j]*yIncreement);
@@ -163,6 +164,7 @@ xhr.onload=function(){
     var boxheight;
     for(i=margin;j<=count;i+=increment)
     {   
+        if(count<=50)
         histContext.fillText(j+"",i+(increment/2),height-(margin/2));
 
         boxheight=(histogramData.histogramData[j])*yIncreement;
