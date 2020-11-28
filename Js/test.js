@@ -233,6 +233,7 @@ function start(e) {
   if(e.key == entityParser(para[i].innerHTML)){
     lightKeyboad(e.key, true);
     para[i].classList.remove("current");
+    para[i].classList.add("done");
     ++i;
     if(para[i])
       para[i].classList.add("current");

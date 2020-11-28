@@ -30,6 +30,10 @@ body {
   padding: 1rem;
 }
 
+.done{
+  color: grey;
+}
+
 .change {
   font-size: 0.6rem;
 }
@@ -39,6 +43,8 @@ body {
   color: white;
 }
 #para {
+  display: flex;
+  flex-wrap: wrap;
   border: 1px solid black;
   width: 45%;
   font-family: monospace;
@@ -63,6 +69,7 @@ body {
 }
 
 #para > span {
+  white-space: pre;
   pointer-events: none;
 }
 
