@@ -130,7 +130,7 @@
             <div class="key key-o key-alpha">
                 <div class="key-title">o</div>
             </div>
-            <div class="key key-e key-alpha">
+            <div class="key key-p key-alpha">
                 <div class="key-title">p</div>
             </div>
             <div class="key key-bracketstart">
@@ -241,14 +241,20 @@
 <!-- typing container end -->
 
   <div class="stats_container">
-    
-    <div class="timer">
-        Time<br>00 : 00
+    <div class="timerContainer">
+        <div class="statsTitle">Time</div>
+        <div class="timer">00 : 00</div>    
     </div>
 
     <div class="stats">
-        <div id="error">Errors:0</div> 
-        <div id="speed">Speed:0WPM</div>  
+        <div class="statsError">
+            <div class="statsTitle">Error</div>
+            <div id="error">0</div>
+        </div>
+        <div class="statsSpeed">
+            <div class="statsTitle">Speed</div>
+            <div id="speed">0 WPM</div>
+        </div>     
     </div>
 
   </div>

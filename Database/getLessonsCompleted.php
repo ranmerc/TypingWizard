@@ -11,7 +11,7 @@
 
     $connection=Config::getConnectionString();
     $connection=pg_connect($connection);
-    $str="";
+    $arr=[];
     $lessonid=[];
     $max = '0.0.0';
     $j=0;
@@ -44,6 +44,17 @@
         if($carr[2] > $marr[2])
             return $curr;
     }
-    $str=$max;
-    echo json_encode($str);
+    $arr[0]=$max;
+
+    $query="select count(lessonid) from lessonsCompleted where username='{$username}'";
+    $res=pg_query($connection,$query);
+    $row=pg_fetch_assoc($res);
+    $arr[1]=$row['count'];//totalLessonIdsInLessonsCompleted
+
+    $query="select count(lessonid) from lessons";
+    $res=pg_query($connection,$query);
+    $row=pg_fetch_assoc($res);
+    $arr['totalLessonIds']=$row['count'];
+
+    echo json_encode($arr);
 ?>

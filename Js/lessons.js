@@ -56,7 +56,7 @@ function getLessons(lessonId)
         if(this.readyState==4 && this.status == 200)
         {
             lessonJSON = JSON.parse(xhr.responseText);
-            //console.log(xhr.responseText);
+            // console.log(xhr.responseText);
             sendText(lessonJSON);//added
         }
     }
@@ -74,38 +74,23 @@ function addAllLessons()
             console.log("lessonId : "+lessonId);//gives 1.1 or 1.2 etc if clicked then travel from 1.1 to 1.1.1 using count in it
             SubSubLesson=0;
             clearInterval(interval);
-            timer.innerHTML="Time<br>"+"00 : 00";
+            timer.innerHTML="00 : 00";
             startOnce=1;
             characterError=0;
-            error.innerHTML="Errors:"+characterError;
+            error.innerHTML=characterError;
             charTyped=0;
-            speed.innerHTML="Speed:0 WPM";
+            speed.innerHTML="0 WPM";
             spanCount=0;
 
-            keyvalue=dText[previousSpanCount].innerHTML.toLowerCase();
-            keyvalue=htmlEntities(keyvalue);
-            if(/^[~`0-9!@#\$%\^&\*\(\)\-_\+=\{\}\[\]:;\'\"|\\<>,\./\/\?]$/.test(keyvalue))
-            {
-                keyvalue=funSwitch(keyvalue);
-            }
-            keyPrevious=document.querySelector(".key-"+keyvalue);
-            keyPrevious.style.background="";
-            if(once==2)
-            {
-                document.querySelector('.key-'+previousClickedKey).style.background="";
-                once=1;
-            }
-            once=1;
-            dText=['1'];
-            nextsublessonKeyClear=2;
-            spanCountPlus=0;
-
+            spanCountPlus=0;//for nextkeylit function
             getLessons(lessonId);
         },false);
     }
 }
 
 //coding from here
+var totalLessonIdsInLessonsCompleted;
+var totalLessonIds;
 
 function getLessonsCompleted()
 {
@@ -118,20 +103,23 @@ function getLessonsCompleted()
         if(this.readyState==4 && this.status == 200)
         {
             var lessonId=JSON.parse(xhr.responseText);
-            console.log("lessonid from responseText :"+lessonId)
-            if(lessonId=='0.0.0')
+            totalLessonIdsInLessonsCompleted=lessonId[1];
+            totalLessonIds=lessonId['totalLessonIds'];
+            console.log("lessonid from responseText :"+totalLessonIds)
+            if(lessonId[0]=='0.0.0')
             {
                 Lesson=1;
                 SubLesson=1;
                 SubSubLesson=0;
-                console.log("okok :"+Lesson)
+                console.log("current Lesson :"+Lesson)
             }
             else
             {
-                var str=lessonId.split('.')
+                var str=lessonId[0].split('.')
                 Lesson=str[0];
                 SubLesson=str[1];
                 SubSubLesson=str[2];
+                console.log("lesson :"+Lesson+"."+SubLesson+"."+SubSubLesson)
             }
 
             getLessons(Lesson+'.'+SubLesson);
@@ -143,8 +131,11 @@ function getLessonsCompleted()
 function sendText(paraString)
 {
     typingSpaceTextarea.value=null;
+    console.log(".... :"+SubSubLesson);
+    console.log("15.10.10 :"+paraString[SubSubLesson])
     if(SubSubLesson<paraString.count)
     {
+        //console.log("paraString[SubSubLesson] :"+paraString[SubSubLesson])
         var str=paraString[SubSubLesson].split('');
         var charspan;
         subLessonTitle.innerHTML=paraString.lessonName;
@@ -168,60 +159,88 @@ function sendText(paraString)
             charspan.innerHTML=str[i];
             displayText.appendChild(charspan);
         }
-        firstKeyLit();
+        nextkeylit('a');
     }
     else if(paraString.count==0)
     {
         //Lesson completed
+        console.log("else if");
         Lesson++;
         SubLesson=1;
         characterError=0;
-        error.innerHTML="Errors:"+characterError;
+        error.innerHTML=characterError;
         startOnce=1;
         clearInterval(interval);
-        timer.innerHTML="Time<br>"+"00 : 00";
+        timer.innerHTML="00 : 00";
         charTyped=0;
-        speed.innerHTML="Speed:0 WPM";
-
-        keyvalue=dText[previousSpanCount].innerHTML.toLowerCase();
-            keyvalue=htmlEntities(keyvalue);
-            if(/^[~`0-9!@#\$%\^&\*\(\)\-_\+=\{\}\[\]:;\'\"|\\<>,\./\/\?]$/.test(keyvalue))
-            {
-                keyvalue=funSwitch(keyvalue);
-            }
-            console.log("next lesson keyPrevious:"+keyvalue)
-            keyPrevious=document.querySelector(".key-"+keyvalue);
-            keyPrevious.style.background="";
-            if(once==2)
-            {
-                document.querySelector('.key-'+previousClickedKey).style.background="";
-                once=1;
-            }
-
-            once=1;
-            dText=['1'];
-            nextsublessonKeyClear=2;
-            spanCountPlus=0;
-
+        speed.innerHTML="0 WPM";
         getLessons(Lesson+'.'+SubLesson);
     }
     else
     {
-        //Sublesson completed
+        //last complted but all not complted
+        console.log("totalLessonIdsInLessonsCompleted in else :"+totalLessonIdsInLessonsCompleted)
+        console.log("totalLessonIds :"+totalLessonIds);
+        if(Lesson==15 && SubLesson==10 && SubSubLesson==10 && totalLessonIdsInLessonsCompleted!=totalLessonIds)
+        {
+            revisit();//to revisit if last is completed
+            
+        }
+        else if(Lesson==15 && SubLesson==10 && SubSubLesson==10 && totalLessonIdsInLessonsCompleted==totalLessonIds)
+        {
+            revisit();
+        }
+
+        else
+        {
+            //Sublesson completed
         SubSubLesson=0;
         SubLesson++;
         clearInterval(interval);
-        timer.innerHTML="Time<br>"+"00 : 00";
+        timer.innerHTML="00 : 00";
         startOnce=1;
         characterError=0;
-        error.innerHTML="Errors:"+characterError;
+        error.innerHTML=characterError;
         charTyped=0;
-        speed.innerHTML="Speed:0 WPM";
+        speed.innerHTML="0 WPM";
         getLessons(Lesson+'.'+SubLesson);
-        firstKeyLit();
+        }
+        
     }
     
-    // firstKeyLit();//for keyboard color
+}
+
+function revisit()
+{
+    if(Lesson==15 && SubLesson==10 && SubSubLesson==10 && totalLessonIdsInLessonsCompleted!=totalLessonIds)
+    {
+            var req = new XMLHttpRequest();
+            req.open("POST","./Database/getMinLessonsNotCompleted.php",true);
+            req.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            req.send();
+            req.onload=function(){
+                if(this.readyState==4 && this.status==200)
+                {
+                    console.log("after onload////");
+                    var lessond=JSON.parse(req.responseText);
+                    console.log("lessonid from responseText :"+lessond)
+                    var str=lessond.split('.')
+                    Lesson=str[0];
+                    SubLesson=str[1];
+                    SubSubLesson=--str[2];
+                    console.log("SubSublesson from  :"+SubSubLesson)
+                    getLessons(Lesson+'.'+SubLesson);
+                }
+            }
+    }
+
+    else if(Lesson==15 && SubLesson==10 && SubSubLesson==10 && totalLessonIdsInLessonsCompleted==totalLessonIds)
+    {
+        Lesson=1;
+        SubLesson=1;
+        SubSublesson=0;
+        getLessons(Lesson+'.'+SubLesson);
+    }
     
 }
 
@@ -288,57 +307,16 @@ function funSwitch(value)
         return 'fullstop';
     if(value=='/' || value=='?')
         return 'forwardslash';
+
+    return value;
 }
 
 typingSpaceTextarea.addEventListener('keydown',match);
 var spanCount=0;
-var keyvalue;
-var once=1;
 
 function match(e)
 {
-    //key light
-    if(once==2)
-    {
-        document.querySelector('.key-'+previousClickedKey).style.background="";
-        once=1;
-    }
-
-    if(spanCountPlus<dText.length && (/^[a-zA-Z0-9`~!@#$%\^&\*()_\-\+=\{\}\[\]:;'"\\|\<\>,\.\?/\" "]$/.test(e.key) || e.key=='Enter'))
-    {
-        
-        console.log("spanCountPlus :"+spanCountPlus);
-        console.log("dText.length :"+dText.length);
-        keyvalue=dText[previousSpanCount].innerHTML.toLowerCase();
-        keyvalue=htmlEntities(keyvalue);
-        if(/^[~`0-9!@#\$%\^&\*\(\)\-_\+=\{\}\[\]:;\'\"|\\\<\>,\./\/\?]$/.test(keyvalue))
-        {
-            keyvalue=funSwitch(keyvalue);
-        }
-        if(keyvalue=='<br>')
-            keyvalue='Enter';
-        keyPrevious=document.querySelector(".key-"+keyvalue);
-        keyPrevious.style.background="";
-
-
-        keyvalue=dText[spanCountPlus].innerHTML.toLowerCase();
-        console.log("kkeeyy :"+keyvalue)
-            keyvalue=htmlEntities(keyvalue);
-
-
-        if(/^[~`0-9!@#\$%\^&\*\(\)\-_\+=\{\}\[\]:;\'\"|\\\<\>,\./\/\?]$/.test(keyvalue))
-        {
-            keyvalue=funSwitch(keyvalue);
-        }
-        if(keyvalue=='<br>')
-            keyvalue='Enter';
-        key=document.querySelector(".key-"+keyvalue);
-        key.style.background="green";
-        console.log("next key green :"+keyvalue)
-        previousSpanCount=spanCountPlus;
-        spanCountPlus++;  
-    }
-
+    //special key pressed
     if(e.getModifierState("CapsLock"))
     {
         document.querySelector(".key-CapsLock").style.background="green";    
@@ -368,8 +346,6 @@ function match(e)
         document.querySelector(".key-backspace").style.background="";
         document.querySelector(".key-tab").style.background="";
     }
-    
-    
     //
 
     if(startOnce==1)
@@ -378,14 +354,21 @@ function match(e)
         startTime();
     }
     
-
     var eText=displayText.querySelectorAll('span');
+
+     //clear wrong key
+    if(spanCount<eText.length)
+    {
+        document.querySelector('.key-'+wrongKeyClear).style.background="";
+    }
+    
+
     if(/^[a-zA-Z0-9`~!@#$%\^&\*()_\-\+=\{\}\[\]:;'"\\|<>,\.\?/\" "]$/.test(e.key) || e.key=='Enter')
     {
         charTyped++;
         if(spanCount<eText.length)
         {
-            console.log("eText :"+eText[spanCount].innerHTML)
+            console.log("eText innerHTML :"+eText[spanCount].innerHTML)
             if(htmlEntities(eText[spanCount].innerHTML)==e.key)
             {
                 eText[spanCount].style.color='gray';
@@ -400,40 +383,21 @@ function match(e)
                 {
                     eText[spanCount].style.color="red";
                     eText[spanCount].style.textDecoration="underline";
-                    if(/^[~`0-9!@#\$%\^&\*\(\)\-_\+=\{\}\[\]:;\'\"|\\<>,\./\/\?]$/.test(e.key))
-                    {
-                        keyvalue=funSwitch(e.key);
-                    }
-                    else
-                    {
-                        keyvalue=e.key;
-                    }
-                    document.querySelector('.key-'+keyvalue).style.background="red";
-                    previousClickedKey=keyvalue;
-                    once=2;
                     characterError++;
-                    error.innerHTML="Errors:"+characterError;
-
+                    error.innerHTML=characterError;
+                    wrongKeyPressed=funSwitch(htmlEntities(e.key.toLowerCase()));
+                    wrongKeyPressedFun();
                 }
             }
             else
             {
                 eText[spanCount].style.color="red";
                 eText[spanCount].style.textDecoration="underline";
-                if(/^[~`0123456789!@#\$%\^&\*\(\)\-_\+=\{\}\[\]:;\'\"|\\<>,\./\/\?]$/.test(e.key))
-                {
-                    keyvalue=funSwitch(e.key);
-                }
-                else
-                {
-                    keyvalue=e.key;
-                }
-                
-                document.querySelector('.key-'+keyvalue).style.background="red";
-                previousClickedKey=keyvalue;
-                once=2
                 characterError++;
-                error.innerHTML="Errors:"+characterError;
+                error.innerHTML=characterError;
+                wrongKeyPressed=funSwitch(htmlEntities(e.key.toLowerCase()));
+                console.log("wrongKeyPressed :"+wrongKeyPressed);
+                wrongKeyPressedFun();
             }
             spanCount++;
             
@@ -441,16 +405,21 @@ function match(e)
             {
                 //SubSublesson completed
                 //enter in lessonsCompleted database
-
                 var xhh = new XMLHttpRequest();
                 xhh.open("POST","./Database/putLessonsCompleted.php",true);
                 xhh.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-                xhh.send("lessonId="+(Lesson+"."+SubLesson+"."+(SubSubLesson+1)));
+                console.log(" lessons completed.... ");
+
+                xhh.send("lessonId="+(Lesson+"."+SubLesson+"."+(++SubSubLesson)));
 
                 console.log("Lesson :"+Lesson+"."+SubLesson+"."+SubSubLesson);
                 spanCount=0;
-                SubSubLesson++;
-                console.log("SubSubLesson :"+SubSubLesson);
+                //SubSubLesson++;
+                console.log("SubSubLesson entered in DB:"+SubSubLesson);
+
+                //clear last wrong key pressed
+                document.querySelector('.key-'+wrongKeyClear).style.background="";
+
                 getLessons(Lesson+'.'+SubLesson);
 
             }
@@ -458,6 +427,15 @@ function match(e)
     }
     else
         e.preventDefault();
+}
+
+//wrong key pressed show on red
+function wrongKeyPressedFun()
+{
+    document.querySelector(".key-"+wrongKeyPressed).style.background="red";
+    wrongKeyClear=wrongKeyPressed;
+    console.log("wrong colored~~~~~~~~~~")
+    return;
 }
 
 
@@ -485,7 +463,7 @@ function showTime()
     second = Math.floor(difference / 1000);
 
     
-    speed.innerHTML="Speed:"+Math.round((charTyped/5)/(second/60))+"WPM";
+    speed.innerHTML=Math.round((charTyped/5)/(second/60))+"WPM";
 
     if(seconds>=60)
     {
@@ -493,54 +471,93 @@ function showTime()
     }
     minutes = (minutes < 10) ? "0" + minutes : minutes;
     seconds = (seconds < 10) ? "0" + seconds : seconds;
-    timer.innerHTML="Time<br>"+minutes+" : "+seconds;
+    timer.innerHTML=minutes+" : "+seconds;
     
 }
 
+//if capslock is on and click on next lesson or sublesson, show it
+document.addEventListener('click',e=>{
+    if(e.getModifierState("CapsLock"))
+    {
+        document.querySelector(".key-CapsLock").style.background="green";    
+    }
+})
+
+
 var spanCountPlus=0;
-var previousSpanCount=0;
-var dText=['1'];
-var key;
-var keyPrevious;
-var nextsublessonKeyClear=2;
-var clickedkey;
-var previousClickedKey;
-function firstKeyLit()
+var dText;
+var keylight;
+var keyclear='a';
+var key;//to select class
+var wrongKeyPressed;
+var wrongKeyClear='tab';
+var spanCountMinus=0;
+
+typingSpaceTextarea.addEventListener('keydown',e=>{
+    var val=e.key;
+    val=htmlEntities(val);
+    nextkeylit(val);
+})
+
+function nextkeylit(e)
 {
-    if(spanCountPlus==dText.length)
+    console.log("spanCountPlus :"+spanCountPlus);
+    dText=displayText.querySelectorAll('span');
+    console.log("dText span length :"+dText.length);
+    if(/^[~`0-9a-zA-Z!@#\$%\^&\*\(\)\-_\+=\{\}\[\]:;\'\"|\\<>,\./\/\?" "]$/.test(e) || e=='Enter')
+    {
+        if(spanCountPlus!=0)
+            dText[spanCountMinus].style.textDecoration="";
+        previousKeyClear();
+    }
+    
+
+    if(spanCountPlus<dText.length)
+    {
+        if(/^[~`0-9a-zA-Z!@#\$%\^&\*\(\)\-_\+=\{\}\[\]:;\'\"|\\<>,\./\/\?" "]$/.test(e) || e=='Enter')//if these key are pressed then spancountplus++
+        {
+            //current key underline
+            dText[spanCountPlus].style.color="blue";
+            dText[spanCountPlus].style.textDecoration="underline";
+            spanCountMinus=spanCountPlus;
+
+            console.log("passed value :"+e)
+            keylight=dText[spanCountPlus].innerHTML.toLowerCase();
+            
+            keylight=htmlEntities(keylight);
+            if(/^[~`0-9!@#\$%\^&\*\(\)\-_\+=\{\}\[\]:;\'\"|\\<>,\./\/\?]$/.test(keylight))
+            {
+                keylight=funSwitch(keylight);
+            }
+            if(keylight=='<br>')
+            {
+                keylight="Enter";
+            }
+            console.log("key glow :"+keylight);
+            key=document.querySelector(".key-"+keylight);
+            key.style.background="green";
+            keyclear=keylight;
+            spanCountPlus++;
+        }
+        else{
+
+        }
+        
+    }
+    else
     {
         spanCountPlus=0;
-        nextsublessonKeyClear=1;
     }
-
-    if(nextsublessonKeyClear==1)
-    {
-        keyvalue=dText[previousSpanCount].innerHTML.toLowerCase();
-        keyvalue=htmlEntities(keyvalue);
-        if(/^[~`0-9!@#\$%\^&\*\(\)\-_\+=\{\}\[\]:;\'\"|\\<>,\./\/\?]$/.test(keyvalue))
-        {
-            keyvalue=funSwitch(keyvalue);
-        }
-        keyPrevious=document.querySelector(".key-"+keyvalue);
-        keyPrevious.style.background="";
-        nextsublessonKeyClear=2;
-    }
-    dText=[];
-    dText=displayText.querySelectorAll('span');
-    keyvalue=dText[spanCountPlus].innerHTML.toLowerCase();
-    keyvalue=htmlEntities(keyvalue);
-
-    if(/^[~`0-9!@#\$%\^&\*\(\)\-_\+=\{\}\[\]:;\'\"|\\\<\>,\./\/\?]$/.test(keyvalue))
-    {
-        keyvalue=funSwitch(keyvalue);
-    }
-
-    key=document.querySelector(".key-"+keyvalue);
-    console.log("first key Llight :"+key.innerHTML);
-    key.style.background="green";
-    previousSpanCount=spanCountPlus;
-    spanCountPlus++;
-
 }
+
+function previousKeyClear()
+{
+    console.log("key clear :"+keyclear);
+    console.log("-----------------");
+    key=document.querySelector(".key-"+keyclear);
+    key.style.background="";
+    return;
+}
+
 
 getLessonsCompleted();
