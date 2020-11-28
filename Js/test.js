@@ -96,7 +96,7 @@ function generatePara(lessonsCompleted) {
   }
   
   // var words = Math.floor(Math.random() * (20 - 15 + 1) + 15);
-  for(var i = 0; i < 1; ++i){
+  for(var i = 0; i < 10; ++i){
     var wordLength = Math.floor(Math.random() * (7 - 3 + 1) + 3);
     for(var j = 0; j < wordLength; ++j){
       para += letterPool[Math.floor(Math.random() * ((letterPool.length-1) - 0 + 1)) + 0];

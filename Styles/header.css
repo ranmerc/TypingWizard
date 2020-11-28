@@ -18,6 +18,7 @@
   color: white;
   flex-wrap: wrap;
   -moz-user-select: none;
+  z-index: 102;
 }
 
 #banner {

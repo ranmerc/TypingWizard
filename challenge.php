@@ -1,3 +1,9 @@
+<?php
+    if(!isset($_COOKIE['username']))
+    {
+        header("Location:login.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,6 +47,39 @@
                     <option value="The Horse and the Groom">The Horse and the Groom</option>
                     <option value="The Wolf and the Lamb">The Wolf and the Lamb</option>
                 </select>
+            </div>
+        </div>
+    </div>
+    <div class="modalBlur"></div>
+    <div id="modal">
+        <span class="close">
+            x
+        </span>
+        <div id="time">
+            <div class="modalTitle" >
+                Time Taken
+            </div>
+            <span id="minutes">
+                59
+            </span> Minutes
+            <span id="seconds">
+                59
+            </span> Seconds 
+        </div>   
+        <div id="wpm">
+            <div class="modalTitle">
+                Words Per Minute
+            </div>
+            <div class="modalValue">
+                999.999
+            </div>
+        </div>
+        <div id="errors">
+            <div class="modalTitle">
+                Errors
+            </div>    
+            <div class="modalValue">
+                99
             </div>
         </div>
     </div>
