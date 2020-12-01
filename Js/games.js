@@ -15,7 +15,7 @@ document.querySelector("#bubble").addEventListener("mouseout", function() {
 })
 
 document.querySelector("#tetris").addEventListener("mouseover", function() {
-    document.querySelector("#backGround").style.backgroundImage = "url('./Images/tetris.jpg')";
+    document.querySelector("#backGround").style.backgroundImage = "url('./Images/tetrisss.jpg')";
 })
 
 document.querySelector("#tetris").addEventListener("mouseout", function() {
